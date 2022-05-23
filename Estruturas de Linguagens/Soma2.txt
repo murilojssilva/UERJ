@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#define OUT 0
+#define STRIN 1
+#define STROUT 2
+#define INT 3
+#define FLOAT 4
+#define NUMSTR 5
+
+int main() {
+
+	char *str = (char*) malloc(sizeof(char));
+	char *num = (char*) malloc(sizeof(char));
+
+	int c, state = OUT, string = 0; // Parâmetro c e estados.
+	int i = 0, x = 1; // Valores para manipular str.
+	// int j = 0, y = 1;	// Valores para manipular num.
+	// float decimal = 0; // Somador de decimais.
+
+	while((c = getchar()) != '\n') {
+		if(c == '"' && state == OUT) { // Verificando se é string.
+			state = STRIN;
+			string = 1;
+		} else if(c != '"' && state == STRIN) {
+			str[i] = (char) c;
+			i++; x++;
+			str = (char*) realloc(str, x*sizeof(char));
+		} else if(c == '"' && state == STRIN) {
+			state = STROUT;
+		} else if(c == '+' && state == STROUT) {
+			state = OUT;
+		}
+
+		if((c >= 48 && c <= 57) && state == OUT && string) { // Número entre strings.
+			state = NUMSTR;
+			str[i] = (char) c;
+			i++; x++;
+			str = (char*) realloc(str, x*sizeof(char));
+		} else if((c >= 48 && c <= 57) && state == NUMSTR && string) {
+			str[i] = (char) c;
+			i++; x++;
+			str = (char*) realloc(str, x*sizeof(char));
+		} else if(c == '+' && state == NUMSTR) {
+			state = OUT;
+		}
+	}
+
+	str[i] = '\0';
+	if(string) printf("\"");
+	printf("%s", str);
+	if(string) printf("\"\n");
+	free(str);
+	free(num);
+	return 0;
+}

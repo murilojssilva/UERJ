@@ -1,0 +1,16 @@
+				Trabalho 1
+		   Alunos: Murilo de Jesus e Joseph Kaltenecker
+		 SISTEMA: AS INTERNAÇÕES NO HOSPITAL SÃO SEBASTIÃO
+
+ -> MANTER convênio com diversos planos de saúde.
+
+ -> DIVIDIR o atendimento entre pacientes conveniados (com plano de saúde) e particulares (não conveniados).
+
+ -> PERMITIR aos conveniados possuir mais de um plano de saúde.
+
+ -> CUSTEAR as internações dos pacientes por um único plano de saúde,de acordo com plano em que o paciente é associado.
+
+ -> ENUMERAR os leitos e dividi-los de forma apropriada para cada enfermaria.
+
+ -> GERENCIAR os pacientes conforme o plano de saúde e o tipo de internação.
+

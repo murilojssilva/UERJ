@@ -1,0 +1,75 @@
+Projeto estruturado é o processo de decidir como as partes componentes de um software serão inter-relacionados de modo a resolver um problema bem especificado.
+Particionamento funcional é o critério adotado pela técnica de P.E., para subdivisão do software em componentes individuais, denominados módulos.
+Método usado em P.E. não está preocupado em encontrar apenas uma arquitetura de funcionamento, ele deseja a "melhor" arquitetura possível para um sistema. Ele se propõe a ajudar a contruir "bons" projetos e evitar a contrução de "maus" projetos
+Projeto estruturado é um conjunto de técnicas, estratégias e heurísticas que levam a bons projetos. O objetivo Primário é: "Projetar Sistemas de Custo Mínimo"
+
+Custo de implementação, modificação e manuntenção são minimizados quando as partes do sistema são:
+- Facilmente relacionadas ao programas;
+- Construtivamente pequenas;
+- Descobrir e corrigir um erro em uma "parte" com 1000 comandos é muito mais difícil que corrigir um "módulo" com 20 comandos;
+- Corrigível separadamente.
+O custo será minimizado quando cada parte do sistema corresponder exatamente a uma pequena e bem definida parte do problema e cada relação entre as partes do sistema corresponder as relações existentes entre as partes do problema.
+
+Como produzir sistemas para o baixo custo:
+Para que a implementação, a manuntenção e a modificação tenham os custos minimizados, o sistema deverá ser projetado com partes pequenas relacionadas com o problema e relativamente independente uma das outras
+Partes muito relacionadas do problema devem estar juntas na mesma parte do sistema
+Partes não relacionadas do problema devem estar em partes não relacionadas do sistema.
+Outro aspecto importante é decidir como inter-relacionar as partes do sistema e não introduzir inter-relacionamentos que não sejam oriundos do problema.
+
+Caixa preta: é um sistema (ou componente) que conhecemos as entradas, as saídas e a transformação, mas não conhecemos seu conteúdo ou implementação. A caixa é preta, não podemos ver dentro dela.
+Programa: sequência ordenada e precisa de comandos com objetivo de realizar uma tarefa
+Módulo: Grupo de comandos contíguos que possuem um único nome pelo qual pode ser referenciado com uma unidade.
+
+Classe de equivalência: É formada pelo conjunto de dados que são tratados da mesma maneira pelo software ou que devem produzir o mesmo resultado.
+Qualquer valor no conjunto é equavalente a qualquer outro do conjunto em termos de teste:
+- se caso um teste detectar um defeito, qualquer outro da mesma classe tem a mesma chance de detectar aquele defeito
+- Se um caso de teste não detectar um defeito, todos os outros da mesma classe tem a mesma chance de não detectar aquele defeito.
+
+Caixa Preta:
+Análise das partições de equivalência
+I - Identificar as classes de equivalência
+II - Definir os casos de teste, a partir das classes de equivalência identificados
+a) Numerar as classes de equivalência
+b) Estabelecer os casos de teste para a cobertura das classes válidas
+(cada caso de teste deve cobrir o maior número de classes válidas)
+c) Estabelecer os casos de teste para a cobertuta das classes inválidas
+(cada caso de teste deve cobrir uma e somente uma das classes inválidas ainda não cobertas)
+
+Análise dos valores limite: Seleciona os casos de teste que valorizam as condições de contorno das classes de equivalência
+a) Selecionar as situações limites de cada partição de equivalência
+b) Explorar as situações limites de entrada como também as situações limites de saída
+
+Análise de causa-efeito
+A técnica de análise de causa e efeito, recomenda a representação das condições de entrada e as ações correspondentes através de grafos. A posterior identificação dos casos de teste é feita com o uso de uma tabela de decisão
+a) Identificar as condições de entrada e as partições de equivalência
+b) Identificar as ações correspondentes provenientes das condições de entrada identificados
+c) Construir o grafo de causa e efeito ou uma tabela de decisão para as associações das condições e ações
+d) Elaborar os casos de teste
+
+Análise por conjecturas de erro: Se baseia na intuição ou na experiência do "testador". Ele deve elaborar uma relação de casos de teste para prováveis erros, os quais ele supõe que possam ocorrer
+- Deve ser visto como um recurso complementar e não como uma técnica
+
+Análise por combinação de elementos: Se baseia no artifício de diminuir os casos de teste fazendo o teste de fatores combinados simultâneamente os elementos em pares para reduzir o número de casos de teste
+- Deve ser visto como um recurso complementar e não como uma técnica
+
+Tabela tem: Número do teste | Dados | Saída do programa | Saída esperada
+
+
+Caixa Branca: Os casos de teste não escolhidos de modo que:
+I - Todas as decisões sejam executadas;
+II - Todos os loops sejam executados, nos seus limites de especificação
+III - Todos os caminhos sejam considerados
+IV - Todas as estruturas de dados sejam utilizadas
+
+Teste de cobertura de instruções: Técnica elementar para determinação geral de casos de teste.
+Examina o comportamento de um módulo através do teste isolado de cada linha de código sob efeito das operações elementares de "seleção ou repetição", não considerando os testes da operação completa com estes componentes.
+
+Teste de cobertura de loops: Técnica para determinação de casos de teste para repetições/loops. Examina o comportamento de um módulo através de testes sob o efeito da associação combinada, ou não, das operações de "repetição (loop)".
+
+Teste de cobertura de caminhos: Técnica para definição de casos de teste com base nos critérios anteriormente definidos, de modo que, o conjunto de casos de teste escolhido seja relativamente pequeno (minimizado)
+Os casos de teste são produzidos com base em um "grafo de fluxo de controle"
+a) Características principais
+- Possuem como elementos básicos: nó e ramo;
+- Cada nó representa um ou mais comandos sequenciais do módulo
+- Cada ramo inicia e termina um nó
+- As áreas delimitadas pelos ramos são denominadas regiões

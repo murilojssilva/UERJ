@@ -1,0 +1,61 @@
+#include <stdio.h>
+#define IN 1 // dentro das aspas
+#define OUT 0 // fora das aspas
+#define INA 2 // nas aspas
+void main()
+{
+	char c,d='\0',aux[10],s[500];
+	int status=OUT,par=OUT,i=0,num=OUT,n,soma = 0;
+	while ((c=getchar())!=EOF)
+	{
+		if (c =='\n' && status == INA)
+		{
+			s[i++] = c;
+			status = OUT;
+		}
+		else if (c !='"' && status == OUT)
+			status = INA;
+		else if (c == '"' && status == OUT)
+			status == INA;
+		else if (c =='"' && status == INA)
+			status = IN;
+		else if (c !='"' && status == IN)
+			status = INA;
+		else if (c == '(' && par == OUT)
+			par = IN;
+		else if (c == '(' && par == IN)
+			par =  INA;
+		else if (c == ')' && par == INA)
+			par = IN;
+		else if (c == ')' && par == IN)
+			par = OUT;
+		else if (c == '+' && par == OUT)
+			status = OUT;
+		else if (d >= '0' && d <= '9' && c == ' ')
+			if (status == OUT)
+			{
+				putchar(d);
+				num = IN;
+				aux[i++] = d;
+				aux[i++] = c;
+			}
+		else if (d >= '0' && d <= '9' && c == '.')
+		{
+			putchar(d);
+			aux[i++] = d;
+			aux[i] = '\0';
+			n = atoi(num);
+			i = 0;
+			aux[i] = '\0';
+			printf("%d",n);
+			soma +=n;
+			n = 0;
+			num = OUT;
+		}
+		if (isalpha(c) && status == IN)
+			s[i++] = c;
+		d = c; 
+	}
+	//printf("%d",soma);
+	puts(s);
+}

@@ -1,0 +1,79 @@
+#include <stdio.h>
+void main()
+{
+	char s1[100], s2[100], r1[200], c,d = '\0';
+	int i1,i2;
+	float f1, f2;
+	gets(s1);
+	gets(s2);
+	/*while ((c=getchar(s1)!=EOF))
+	{
+		if (isdigit(d)) // se o de tras é digito
+			if (c==' ') // se o da frente é espaço
+			{	
+				i1 = atoi(s1);
+				s1 = '\0';
+				break;
+			}		
+			else if (c='.') // se o da frente é ponto
+			if (isdigit(d))
+			{	
+				f1 = atof(s1);
+				s1 = '\0';
+				break;
+			}
+		d = c;	
+	}
+	d = '\0';
+	while ((c=getchar(s2)!=EOF))
+	{
+		if (isdigit(d)) // se o de tras é digito
+			if (c==' ') // se o da frente é espaço
+			{	
+				i2 = atoi(s2);
+				s2 = '\0';
+				break;
+			}		
+			else if (c='.') // se o da frente é ponto
+			if (isdigit(d))
+			{	
+				f2 = atof(s2);
+				s2 = '\0';
+				break;
+			}
+		d = c;	
+	}*/
+	if (i1 && i2 == NULL && f1 && f2 == NULL && s1 == '\0' && s2 == '\0')
+	{
+		f2 = (float) i1;
+		println(f1 + f2);
+	}
+	else if (i1 == NULL && i2 && f1 && f2 == NULL && s1 == '\0' && s2 == '\0')
+	{
+		f2 = (float) i1;
+		println(f1 + f2);
+	}
+	else if (i1 == NULL && i2 && f1 == NULL && f2 && s1 == '\0' && s2  == '\0')
+	{
+		f1 = (float) i1;
+		println(f1 + f2);
+	}
+	
+	else if (i1 && i2 == NULL && f1 = NULL && f2 && s1 == '\0' && s2 ==  '\0')
+	{
+		f1 = (float) i1;
+		println(f1 + f2);
+	}	
+	else if (i1 == NULL && i2 == NULL && f1 && f2 && s1 == '\0' && s2 == '\0')
+	{
+		printf(f1 + f2);
+	}
+	else if (i1 && i2 && f1 == NULL && f2 == NULL && s1 == '\0' && s2 == '\0')
+	{
+		printf(i1 + i2);
+	}
+	else if (i1 == NULL && i2 == NULL && f1 == NULL && f2 == NULL && s1 != '\0' && s2 != '\0')
+	{
+		strcat(s1,s2);
+	}
+}

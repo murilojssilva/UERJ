@@ -1,0 +1,7 @@
+"Curso " + " de" + "Programação C"
+"Dia " + 8 + "de Outubro"
+"Brasil, " + (3 + (2+1) + 5) + " de Setembro de " + 2000
+"Dia " + (2+1)
+"Dia " + 2 + 1
+1 + 1.5 + 2
+1 + 2 + 3
