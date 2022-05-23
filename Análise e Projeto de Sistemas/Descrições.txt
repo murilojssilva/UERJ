@@ -1,0 +1,11 @@
+Diagrama de pacote 
+O Diagrama de Pacotes apresenta os pacotes, agrupados de acordo com a sua especificidade e suas dependências. Este diagrama é utilizado para ilustrar a arquitetura lógica de um sistema, mostrando o agrupamento de suas classes, e pode ser utilizado em qualquer fase do processo de modelagem. Um pacote é um mecanismo para organizar elementos de um modelo(classes, diagramas ou até mesmo outros pacotes) em grupos. Os pacotes possuem uma relação de dependência com outros pacotes. Esse diagrama visa organizar os modelos e é representado por uma pasta com o nome no interior ou na pega.
+
+
+Diagrama de sequências do sistema
+O Diagrama de Sequência do Sistema representa como o sistema irá trabalhar quando ele estiver em operação. Neste capítulo, apresentaremos os diagramas de sequência baseado no caso de uso extendido no capítulo dedicado aos casos de uso.
+O Diagrama de sequência do sistema procura determinar a sequência de eventos de um determinado caso de uso, ou seja, quais operações devem ser disparadas entre os objetos envolvidos e qual a ordem para a realização do caso de uso. Um evento é uma entrada externa gerada por um ator para o sistema. Este evento dispara uma operação do sistema. Já os objetos representam as instâncias das classes envolvidas no processo ilustrado pelo Diagrama de Sequência.
+O Diagrama possui dois eixos: o eixo vertical mostra a linha do tempo e os elementos que disparam recebem ou respondem eventos. O nome do objeto compõe a parte superior deste eixo e uma linha tracejada, a partir do retângulo que representa tal objeto, denominada linha da vida, que representa o tempo em que um objeto esteve operando durante o processo. Já na parte horizontal temos as mensagens, que são utilizadas para demonstrar a ocorrência de eventos e outras informações trocadas pelos elementos, que normalmente forçam a chamada de um método em algum dos objetos envolvidos no processo. São representadas por seta podem ser dos tipos: síncrona, quando o emissor fica bloqueado até o 
+
+OBS1: Descrição do caso de uso Busca por acomodação alterado. O fluxo de exceção desistência só está lá para caso for necessário para a descrição do caso de uso Cancelar pedido.
+OBS2: Estou apenas esperando os diagramas ficarem prontos para terminar as descrições.

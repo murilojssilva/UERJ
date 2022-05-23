@@ -1,0 +1,156 @@
+buscar por acomodação
+efetuar reserva
+efetuar pagamento
+
+Buscar por acomodação: O usuário entra no aplicativo e seleciona a opção "Para aonde quer ir". Em seguida, ele têm duas opções: ou digita na caixa de texto o local desejado por ele ou seleciona a opção "Buscar próximo" que, através do GPS, localiza o local em que o usuário está naquele momento. Escolhendo qualquer uma das opções, aparecerá para o usuário um catálogo de imóveis e serviços disponíveis, que contém a foto do imóvel/serviço, o valor e a foto do anfitrião. Caso julgue necessário, pode-se escolher a data de chegada e de partida do cliente, além de outros filtros:
+* Quantidade de hóspedes;
+* Tipo de acomodação:
+- Quarto inteiro;
+- Quarto compartilhado;
+- O lugar todo.
+* Somente reservar o imóvel/serviço;
+* Valores mínimo e máximo de preço por noite;
+* Informações de acomodações:
+- Quantidade de quartos;
+- Quantidade de camas;
+- Quantidade de banheiros;
+* Comodidade:
+- Wi-fi (internet sem fio);
+- Cozinha;
+- Piscina;
+- Ar condicionado;
+- TV;
+- TV a cabo;
+- Internet;
+- Acessabilidade para cadeirantes;
+- Estacionamento gratuito;
+- Permite fumar;
+- Permite animais de estimação;
+- Porteiro;
+- Café da manhã;
+- Jacuzzi;
+- Lareira interna;
+- Interfone;
+- Aquecimento central;
+- Ideal para família;
+- Apropriado para eventos;
+- Máquina de lavar;
+- Secadora;
+- Detector de fumaça;
+- Detector de monóxido de carbona;
+- Kit de primeiros socorros;
+- Cartão de segurança;
+- Extintor de incêndios;
+- Acessórios de higiene pessoal.
+Após esse processo, caso o usuário se interesse por alguma das opções, ele a seleciona e aparecerá ao mesmo as informações sobre a seleção:
+* Fotos;
+* Valor;
+* Descrição informada pelo anfitrião;
+* Informação sobre acomodação;
+* Quantidade de hóspedes disponíveis;
+* Quantidade de quartos disponíveis;
+* Tempo mínimo de estadia;
+* Comodidades disponíveis;
+* Regras de cancelamento e da casa;
+* Disponibilidade na data selecionada pelo usuário;
+* Horário de check-in e check-out;
+* Detalhes de preços.
+* Endereço do imóvel/serviço (com o mapa da localização)
+* Quantidade de camaas disponíveis;
+* Comentários de outros usuários (com nome, foto do usuário e data de publicação);
+* Descrição do anfitrião;
+* Anúncios semelhantes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+buscar por acomodação
+efetuar reserva
+efetuar pagamento
+
+Buscar por acomodação
+O usuário entra no aplicativo e seleciona a opção "Para aonde quer ir". Em seguida, ele têm duas opções: ou digita na caixa de texto o local desejado por ele ou seleciona a opção "Buscar próximo" que, através do GPS, localiza o local em que o usuário está naquele momento. Escolhendo qualquer uma das opções, aparecerá para o usuário um catálogo de imóveis e serviços disponíveis, que contém a foto do imóvel/serviço, o valor e a foto do anfitrião. Caso julgue necessário, pode-se escolher a data de chegada e de partida do cliente, além de outros filtros:
+* Quantidade de hóspedes;
+* Tipo de acomodação:
+- Quarto inteiro;
+- Quarto compartilhado;
+- O lugar todo.
+* Somente reservar o imóvel/serviço;
+* Valores mínimo e máximo de preço por noite;
+* Informações de acomodações:
+- Quantidade de quartos;
+- Quantidade de camas;
+- Quantidade de banheiros;
+* Comodidade:
+- Wi-fi (internet sem fio);
+- Cozinha;
+- Piscina;
+- Ar condicionado;
+- TV;
+- TV a cabo;
+- Internet;
+- Acessabilidade para cadeirantes;
+- Estacionamento gratuito;
+- Permite fumar;
+- Permite animais de estimação;
+- Porteiro;
+- Café da manhã;
+- Jacuzzi;
+- Lareira interna;
+- Interfone;
+- Aquecimento central;
+- Ideal para família;
+- Apropriado para eventos;
+- Máquina de lavar;
+- Secadora;
+- Detector de fumaça;
+- Detector de monóxido de carbona;
+- Kit de primeiros socorros;
+- Cartão de segurança;
+- Extintor de incêndios;
+- Acessórios de higiene pessoal.
+Após esse processo, caso o usuário se interesse por alguma das opções, ele a seleciona e aparecerá ao mesmo as informações sobre a seleção:
+* Fotos;
+* Valor;
+* Descrição informada pelo anfitrião;
+* Informação sobre acomodação;
+* Quantidade de hóspedes disponíveis;
+* Quantidade de quartos disponíveis;
+* Tempo mínimo de estadia;
+* Comodidades disponíveis;
+* Regras de cancelamento e da casa;
+* Disponibilidade na data selecionada pelo usuário;
+* Horário de check-in e check-out;
+* Detalhes de preços.
+* Endereço do imóvel/serviço (com o mapa da localização)
+* Quantidade de camas disponíveis;
+* Comentários de outros usuários (com nome, foto do usuário e data de publicação);
+* Descrição do anfitrião;
+* Anúncios semelhantes.
+
+Efetuar reserva
+
+	O usuário entra no aplicativo e seleciona a opção "Para aonde quer ir". Em seguida, ele têm duas opções: ou digita na caixa de texto o local desejado por ele ou seleciona a opção "Buscar próximo” ,que, através do GPS, localiza o local em que o usuário está naquele momento. Escolhendo qualquer uma das opções, aparecerá para o usuário um catálogo de imóveis e serviços disponíveis, que contém a foto do imóvel/serviço, o valor e a foto do anfitrião. Caso julgue necessário, pode-se escolher a data de chegada e de partida do cliente, além de outros filtros. Após selecionados todos os filtros desejados, o usuário procura qual imóvel/serviço que mais lhe agrada. Após ler todas as informações disponíveis sobre o imóvel, o cliente tem duas opções: 
+* Falar com o anfitrião para sanar quaisquer dúvidas sobre a locação;
+ * Selecionar a “Reserva Instantânea”. 
+Nesta opção, aparecerá o título do imóvel/serviço em questão e o cliente deve selecionar as datas de chegada e saída do inquilino do imóvel/tempo de serviço que o usuário achar válido. Além disso, deve informar a quantidade de hóspedes que irão se hospedar. Após essas informações, o sistema calculará o valor a ser pago pelo inquilino pelo serviço.  Caso o cliente possua, ele pode inserir o código de cupom de desconto. Além do valor a ser pago, é informado o valor do depósito de segurança a ser pago para que o cliente possa assegurar a reserva. Após esses passos, o cliente deve selecionar qual a sua forma de pagamento, que podem ser:
+* PayPal;
+* Google Wallet;
+* Alipay;
+* Cartão de Crédito.
+OBS: Não sei se, caso o cliente já tenha cadastrado a forma de pagamento, ele precisa selecionar a forma de pagamento dnv ou se vai automaticamente. Vou pesquisar mas até agora não achei nd.
+
+Após selecionada a forma de pagamento e inseridos os dados da mesma, o cliente já confirmará a reserva do imóvel.

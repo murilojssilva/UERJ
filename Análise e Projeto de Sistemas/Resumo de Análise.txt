@@ -1,0 +1,45 @@
+Diagrama de Contexto: Diagrama de fluxo de dados de mais alto nível que representa um sistema como um único processo.
+O diagrama de contexto modela o ambiente no qual ele está inserido.
+Indica os elementos externos com os quais o sistema interage.
+Permite a quem consulta identificar os relacionamentos do sistema com outros processos.
+Não descreve as transações a desenvolver
+Modelar um ambiente de forma genérica.
+Composto por:
+- Processo: conjunto de tarefas ou ações feitas a partir de um fluxo de dados de entrada para produzir fluxos de dados de saída. No caso do diagrama de contexto o sistema inteiro é representado como um único processo.
+- Fluxo de Dados: Movimento de dados em uma determinada direção de uma fonte para um destino em forma de documentos, cartas, chamadas telefônicas ou virtualmente por qualquer outro meio.
+- Entidades Externas: Podem ser pessoas, programas, organizações e outras entidades que interagem com o sistema, mas estão além da fronteira do sistema. O estudo da relação entre entidades externas não faz parte do modelo.
+
+
+Diagrama de sequência:
+Pode ser utilizado como produto da Análise orientada a Objetos
+Seu foco é no comportamento do sistema
+Apresenta a ordem temporal das mensagens enviadas e recebidas pelos objetos
+Ajuda a descobrir onde colocar a chamada dos métodos dentro do sistema
+Ajuda a verificar se a comunicação entre as classes está coerente
+Elementos:
+* Atores
+* Objetos (instâncias de classe)
+* Linha de vida (tempo de vida do objeto dentro do sistema)
+* Mensagem Síncrona (chamada de método)
+* Retorno (indica a resposta para o objeto ou para o ator que o chama)
+
+
+Include: Forma de interação do Diagrama de Casos de Uso onde um caso de uso pode incluir outro, ou seja, é necessário que esse caso de uso exista para que o outro funcione.
+Ex: ALTERAR DADOS DO CLIENTE e INCLUIR CLIENTE, obrigatoriamente será necessário CONSULTAR DADOS DO CLIENTE.
+
+Extend: Forma de interação do Diagrama de Casos de Uso onde um caso de uso estende de outro, ou seja, um caso de uso novo será criado com base no outro, mas com alguns novos passos inseridos.
+
+
+Casos de uso
+Fronteira: Serve para definir a área de atuação do sistema. Elemento opcional.
+Entidade: Ser que interage com o sistema para executar uma determinada função.
+Controlador: Máquina que executa a aplicação controladora
+
+
+Diagrama de classes
+Associação: Relacionamento estrutural que indica que os objetos de uma classe estão vinculados a objetos de outra classe. É representada por uma linha pontilhada conectando as duas classes. Podem ser
+Agregação: Tipo especial de associação que é utilizada para indicar "todo-parte". Ex: Um time é formado por atletas, mas os atletas existem independentemente do time existir. Representado pelo balão branco.
+Composição: Ex: Um livro de é composto de vários capítulos, mas um capítulo deixa de existir se não houver um livro. Representado por um balão preto.
+
+Multiplicidade: Quantidades de elementos que se relacionam entre si. Ex: 0..1, 0..*, *..*
+
