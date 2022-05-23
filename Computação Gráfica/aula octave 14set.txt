@@ -1,0 +1,102 @@
+>>> red = [0 1 0; 1 0 1; 1 0 0.5];
+>>> red
+red =
+
+   0.00000   1.00000   0.00000
+   1.00000   0.00000   1.00000
+   1.00000   0.00000   0.50000
+
+>>> green = [0 0 1; 1 0 0; 1 1 0.5];
+>>> green
+green =
+
+   0.00000   0.00000   1.00000
+   1.00000   0.00000   0.00000
+   1.00000   1.00000   0.50000
+
+>>> green = [0 0 1; 1 0 0; 1 1 0.5]
+green =
+
+   0.00000   0.00000   1.00000
+   1.00000   0.00000   0.00000
+   1.00000   1.00000   0.50000
+
+>>> blue = [0 0 0; 0 1 1; 1 1 0.5]
+blue =
+
+   0.00000   0.00000   0.00000
+   0.00000   1.00000   1.00000
+   1.00000   1.00000   0.50000
+
+>>> rgb = cat(3, red, green, blue)
+rgb =
+
+ans(:,:,1) =
+
+   0.00000   1.00000   0.00000
+   1.00000   0.00000   1.00000
+   1.00000   0.00000   0.50000
+
+ans(:,:,2) =
+
+   0.00000   0.00000   1.00000
+   1.00000   0.00000   0.00000
+   1.00000   1.00000   0.50000
+
+ans(:,:,3) =
+
+   0.00000   0.00000   0.00000
+   0.00000   1.00000   1.00000
+   1.00000   1.00000   0.50000
+
+>>> imshow(rgb)
+>>> imshow(rgb)
+>>> figure
+>>> imshow(rgb)
+>>> r = rgb(:,:, 1)
+r =
+
+   0.00000   1.00000   0.00000
+   1.00000   0.00000   1.00000
+   1.00000   0.00000   0.50000
+
+>>> cd "/tmp/guest-WXvbcS/햞ea de Trabalho"
+>>> cd "/tmp/guest-WXvbcS/햞ea de Trabalho"
+>>> cd "/tmp/guest-WXvbcS/햞ea de Trabalho/imagens"
+>>> cd "/tmp/guest-WXvbcS/햞ea de Trabalho/imagens"
+>>> a = imread('arara_full.png');
+warning: your version of GraphicsMagick limits images to 8 bits per pixel
+>>> size(a)
+ans =
+
+   296   460     3
+
+>>> r = a(: , : , 1);
+>>> imshow(r);
+>>> g = a(:, :, 2);
+>>> b = a(:, :, 3);
+>>> aa = cat(3, b, g, r);
+>>> imshow(aa);
+>>> figure
+>>> imshow(a);
+>>> imhist(r);
+warning: the 'imhist' function belongs to the image package from Octave Forge
+which seems to not be installed in your system.
+
+Please read <http://www.octave.org/missing.html> to learn how you can
+contribute missing functionality.
+
+
+error: 'imhist' undefined near line 1 column 1
+>>> imhist(r)
+warning: the 'imhist' function belongs to the image package from Octave Forge
+which seems to not be installed in your system.
+
+Please read <http://www.octave.org/missing.html> to learn how you can
+contribute missing functionality.
+
+
+error: 'imhist' undefined near line 1 column 1
+>>> img256 = imread('arara_full_256.bmp');
+>>> imshow(img256);
+>>> [img256 mapa] = imread('arara_full_256.bmp');
