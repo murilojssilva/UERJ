@@ -1,0 +1,31 @@
+Questão 1
+
+
+
+A chaleira, além de mudar de cor, recebeu algumas sombras nas partes que representam as curvas, dando um aspecto à imagem de que a imagem representa um objeto em formato 3d.
+Após a chamada da função DefineIluminacao(), a iluminação nas partes centrais da chaleira ficaram mais evidentes, enquanto mas beiradas a sombra ficou maior.
+
+A função glShadeModel é utilizada para especificar a técnica de interação da luz com o objeto. Neste caso, ela quis iluminar as partes mais escuras como as formas geométricas da chaleira, que são as partes que costumam ser menor iluminadas.
+
+Questão 2
+
+Quando se altera uma das 3 variáveis de cor da chaleira, algumas partes dela mudam de cor, como uma parte do bico, a parte de baixo da alça e próximo à tampa. Removendo toda a cor, a chaleira fica mais escura.
+Removendo somente o que representa o red, estas partes ficam na cor azul claro;
+Removendo somente o que representa o green, estas partes ficam rosa.
+Removendo somente o que representa o blue, estas partes ficam amarelo.
+
+Questão 3
+
+Responsável pela definição da concentração de brilho. Ela ajuda a distinguir o tipo de material que está sendo utilizado na confecção da chaleira.
+
+Questão 4
+
+A cheleira perdeu a capacidade de refletir a luz especular com a remoção dessa função, ou seja, perdeu a capacidade de reflexo espelhado da luz.
+
+Questão 5
+
+Quanto maiores os valores indicados, maior o clareamento da imagem. Essa variável simula a luz ambiente.
+
+Questão 6
+
+Através do cálculo da intensidade da luz com a chaleira, é possível verificar o nível de clareamento da chaleira. Esse cálculo define as partes que possuem maior ou menor interação com a luz.
