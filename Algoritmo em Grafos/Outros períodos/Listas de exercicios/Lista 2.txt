@@ -1,0 +1,3 @@
+1- Uma das condições para ser um grafo euleriano é que todos os vértices devem ter grau par. Alem disso, o grafo deve ser conexo. Assim, como um grafo trivial tem |d(v)| = 0 (indução), |d(v)| par dos grafos de n vértices, deve ser ímpar, com G conexo.
+
+2- 

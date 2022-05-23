@@ -1,0 +1,4 @@
+Planaridade: grafo onde as arestas ñ se cruzam
+Hamiltoniano
+Euleriano
+Coloração

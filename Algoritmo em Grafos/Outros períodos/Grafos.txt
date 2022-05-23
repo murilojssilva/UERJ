@@ -1,0 +1,94 @@
+Algoritmo da trilha euleriana
+Inicio
+	Se (G é conexo e Para todo v, d(v) é par)
+	Então:
+		Inicio
+		Enquanto (existir arestas em G faça)
+		Faça:
+			Inicio
+				Remova as arestas de um ciclo Ck de G e armazene ea atualize G;
+				Selecione um ciclo e defina a trilha euleriana;
+				Enquanto (existir um ciclo não selecionado)
+				Faça:
+					Inicio
+					Selecione um ciclo com um vértice em com o grafo Euleriano;
+				Fim;
+			Fim;
+		Fim;
+	Fim;
+Fim.
+
+Satisfabilidade (SAT): É o teorema em que, dado um problema P, exista um algoritmo A que resolva P e gere um certificado SIM. É de complexidade NP-Completo. Se for tudo correto, A é satisfazível para P, ou seja, gera uma fórmula que resolva o problema.
+Para provar que SAT é NP-Completo, deve-se considerar que cada cláusula tem o tamanho máximo n  e que existem m cláusulas, checadas em tempo O(m*n), um certificado para a resposta SIM. Portanto SAT é NP.
+
+Um grafo G(V,E) é um par onde V é o conjunto finito e não vazio de vértices e E é o conjunto de pares não ordenados de arestas
+Pode ser representado por matriz de adjcências ou por lista de incidências
+Subgrafo: V(H) c V(G) E(H) c E(G)
+|V(G)| = n
+|E(G)| = m 
+u e v são adjacentes se eles formarem uma aresta
+u e v são independentes se eles não formarem uma aresta
+Grau de um vértice: Número de vértices adjacentes a um vértice v.
+?(G) = Grau máximo
+d(G) = Grau mínimo
+No grafo regular, d(G) = ?(G)
+d(v) = |N(v)|
+Dígrafo: Grafo com arestas direcionadas.
+Um passeio em um grafo G= (V, E) é uma seqüência alternada de vértices e arestas que começa e termina com vértices.
+Um caminho ou caminho simples em um grafo é um passeio em que todos os seus VÉRTICES são distintos. (Passa uma vez só por cada vértice).
+Uma trilha ou trajeto em um grafo é um passeio em que todas as suas ARESTAS são distintas (Pode passar pelo vértice mais de uma vez, desde que a aresta seja diferente).
+Ciclo é uma trilha fechada.
+Grafo conexo é aquele que é possível estabelecer um caminho de qualquer vértice a outro
+Grafos Isomorfos: São grafos que possuem correspondência que preservem adjacência, mas não tem nada a ver com o grau de G e G'.
+Grafo autocomplementar: G e G' são isomorfos
+Caminho: passeio com todos os vértices distintos.
+Árvore: Um grafo que é conexo e acíclico
+Floresta: Um grafo que é acíclico
+Grafo conexo: Grafo dado um par qualquer
+de vértice v e w em G, existe um caminho de v para w.
+Grafo bipartido: grafo que não contém ciclos de comprimento ímpar
+Grafo planar: É aquele que suas arestas não se cruzam
+Bipartido completo: Cada vértice do primeiro conjunto se relaciona com cada vértice do segundo conjunto.
+Subgrafo induzido é obtido pela remoção de vértices e consequentes arestas
+Supergrafo: É o grafo G que dá origem a um subgrafo H
+Subgrafo induzido pelo conjunto X: É o subgrafo que deriva do conjunto X, sendo X o conjunto de vértices excluídas do grafo original
+Subgrafo gerador: É o subgrafo H de G em que todos os vértices de G fazem parte de H.
+Subgrafo Maximal: É um grafo H que deriva de G mas que não está contido em nenhum subconjunto possível de G
+Grafo completo: É o grafo que, para cada vértice do grafo, existe uma aresta que liga esse vértice aos demais. Logo, é o que todos os vértices possuem o mesmo grau, sendo d(v) >=1.
+Grafo regular: é o que todos os vértices possuem o mesmo grau
+Grafo nulo: Conjunto de vértices vazio
+Grafo vazio: Conjunto de arestas vazio
+Grafo trivial: Possui apenas um vértice e, consequentemente, nenhuma aresta
+Grago k-regular = É o grafo em que todos os vértices tem grau igual a k (d(v) = k)
+Tamanho (k): É a qtd de vértices necessários para se fazer um passeio
+Distância (ou d(u,v)): É o menor k entre os vértices u e v.
+Componentes conexas: É a quantidade de subgrafos que possuem uma conexão (até os triviais)
+Passeio fechado: v0 = vk
+Ciclo: Trilha (arestas diferentes) fechada
+Grafo planar: É o grafo que pode ser representado em um plano sem qualquer interseção entre as arestas
+Corte de vértices: É um subconjunto minimal de vértices, cuja remoção de qualquer vértice desse conjunto desconecta G
+Conectividade de vértices: Quantidade de elementos do menor corte de vértices de G. (Vértices tirados para desconectar G)
+Conectividade de arestas: Quantidade de elementos do menor corte de arestas de G. (Arestas tiradas para desconectar G)
+Kn: Grafo completo (d(v) = n-1)
+Cn: Grafo ciclo (Não repete arestas)
+Sn: Árvore (Grafo conexo e acíclico)
+Qn: Hipercubo (n dimensões e 8 vértices)
+Pn: Grafo Caminho (Não repete os vértices)
+Wn: Grafo roda (Grafo simples com n+1 vértices, acrescentando 1 vértice a G, sendo G um ciclo)
+
+
+Grafo Euleriano: Grafo conexo com todos os vértices com grau par. Grafo que não repete vértice, logo
+para o grafo ser euleriano, ele deve possuir uma trilha euleriana.
+
+Grafo Hamiltoniano: Grafo conexo em que contenha um ciclo hamiltoniano, ou seja, não repete aresta e que todos os vértice (exceto no fechamento do ciclo) é passado uma vez. Não existe um algoritmo que indique se um grafo possui um ciclo hamiltoniano.
+
+
+
+GRAFO		HAMILTON	EULER		X
+Km;n		m=n>=2          m e n pares	2
+Kn		Ptn>=3		n>=4,n par	n
+Qn		Pt n>=2		n>=2,n par	2
+Sn		não é		não é		2
+Pn		não é		não é		2
+Cn		Ptn>=3		Ptn>=3		2 se n par, 3 se n impar
+Petersen	não é		não é		3	
