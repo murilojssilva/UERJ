@@ -1,0 +1,116 @@
+Aula 2: Teorias de aprendizagem
+Visões sobre aprendizagem:
+- Processo
+- Resultados
+- Circunstâncias
+Prática educacional: Implementação de formas de ensino considerando alguma teoria de aprendizagem
+
+Aprendizagem (Século XX): Mudança observável no comportamento do indivíduo
+Homem (Século XX): Organismo passivo governado por estímulos fornecidos pelo ambiente externo
+
+Abordagem comportamentalista
+1) Thorndlike
+- Importante por ter sido o formulador da primeira teoria de aprendizagem na Psicologia
+- Associacionismo: Aprendizagem se dá pelo processo de associação de ideias. Estudo do comportamento animal
+- Lei do efeito: Todo comportamento de um organismo vivo tende a se repetir se nós recompensarmos o organismo e tende a não acontecer se o organismo for castigado.
+
+2) Pavlov
+- Associação estímulo-resposta: Algumas respostas comportamentais são da natureza do ser humano em vez de aprendidas, enquanto que outras são reflexos condicionados, aprendidos através do emparelhamento com situações agradáveis ou aversivas simultâneas ou imediatamente posteriores
+
+3) Watson
+- Todo conhecimento é adquirido através do condicionamento
+- Existe uma resposta imediata para qualquer tipo de estímulo, do mesmo modo que em qualquer resposta existe um estímulo
+
+4) Skinner
+- Conhecimento: Repertório de comportamentos que se manifestam a partir de um estímulo particular. Probabilidade de conhecimento especializado
+- Reforço: Aumenta a probabilidade de resposta
+- Recompensas fortalecidas e punições enfraquecidas
+- Professor: figura central no processo
+- Ensino programado: progressão gradual e tecnicas de insinuação e instigação
+
+5) Gagné
+- Aprendizagem: causa mudança observável
+- Habilidades devem ser aprendidas uma de cada vez
+- Cada nova habilidade deve ser construida sobre as outras adquiridas anteriormente
+- Aprendizagem e conhecimento são de natureza hierárquica
+- Condições para aprendizagem
+* Eventos internos: atenção, motivação, grau de desenvolvimento intelectual
+* Eventos externos: ensino - contiguidade, repetição, reforço
+
+Fases dos processos internos de aprendizagem:
+Motivação, apreensão, aquisição, retenção, lembrança, generalização, desempenho e feedback
+
+Principais tipos de saídas para aprendizagem:
+- Informação verbal
+- Habilidades intelectuais
+- Estratégias cognitivas
+- Atitudes
+- Habilidades motoras
+
+Abordagem construtiva
+- Início dos anos 80
+- Conhecimento: (re)construído pelos indivíduos quando interagem com o ambiente
+- Aluno: Sujeito no processo de aprendizagem
+- Professor: Provocador e estimulador de novas experiências
+
+6)Piaget
+- Teoria de gênese do conhecimento
+* Epistemologia genética
+* O conhecimento é gerado através de uma interação do sujeito com seu ambiente, a partir de estruturas existentes no sujeito
+- Desenvolvimento da inteligência
+* Processo de maturação
+* A aquisição de conhecimentos só ocorre mediante a consolidação das estruturas e pensamentos
+- Estruturas
+* Operações mentais
+* Ações que ocorrem na mente
+- Esquemas
+* Sequência definida de ações
+
+Estágios do processo de desenvolvimento da inteligência
+- Sensório-motor (nascimento até 2 anos)
+* Esquemas sensório-motores
+- Operações concretas
+* Pensamento pré-operacinal(2 a 7 anos)
+** Linguagem
+** Símbolos
+** Imagens mentais
+* Pensamento operacional concreto (7 a 12 anos)
+** Reversabilidade
+** A criança começa a formar conceitos como os de números e classes
+** Possui lógica consistente e habilidade de solucionar problemas concretos
+** Relacionamento das operações concretas com objetos
+- Operações formais (a partir dos 12 anos)
+* Raciocínio hipotético-dedutivo
+* Deduções lógicas
+* Refletir para além do real presente
+* Refletir sobre possibilidades
+* Fazer planos
+* Elaborar teorias
+* Construir sistemas
+* Pensar sobre o próprio pensamento
+Desenvolvimento cognitivo é facilitado pela oferta de atividades ou situações que provoquem desequilíbrio
+Materiais devem envolver nível apropriado de acordo com o estágio de desenvolvimento
+
+7) Ausubel
+- Aprendizagem
+* Processos ordenados, representativos e combinados
+* Processo que envolve a interação da nova informação abordada com a estrutura cognitiva do aluno
+- Conjunto de conhecimentos prévios: base para novos conceitos e ideias
+- Informações organizadas no cérebro de forma hierárquica
+- Processos mentais
+* Reconcicliação integrativa
+* Subsunção
+* Assimilação
+* Diferenciação progressiva
+* Consolidação
+- Professor: Responsável por estabelecer o conteúdo e a estrutura do material a ser atendido
+
+8)Bruner
+- Aprendizagem por descoberta: de maneira dirigida
+- Aluno: participação ativa no processo ensino-aprendizagem
+
+Aspectos da teoria da aprendizagem:
+- Processo de aprendizagem
+- Modos de estruturação e organização dos conhecimentos
+- Sequências mais efetivas de apresentação dos conteúdos
+- Natureza e ritmo das recompensas e punições
