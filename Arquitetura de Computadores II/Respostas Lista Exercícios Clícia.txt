@@ -1,0 +1,53 @@
+1- Localidade de referência: é um princípio que estabelece que os programas acessam uma parte relativamente pequena do seu espaço de endereçamento em um dado instante de tempo.
+Divide-se em dois tipos de localidade
+* Temporal: estabelece que se um item é referenciado, ele tende a ser referenciado novamente dentro de um espaço de tempo muito pequeno;
+* Espacial: estabelece que se um item é referenciado, outros itens cujos endereços estejam próximos dele tendem a ser referenciados rapidamente.
+
+2- Tabela.
+
+3- Hierarquia de memória pode ser analisada segundo suas capacidades de armazenamento, custo por bit e tempo de acesso. A hierarquia mais comum é a seguinte:
+* Memória secundária: Memória mais lenta, mas com capacidade de armazenar grande quantidade de dados. Seu custo por bit é menor.
+* Memória principal: Capaz de armazenar uma quantidade menor de informações, custo por bits maior e tempo de acesso menor que as memórias secundárias;
+* Memória cache: Memória mais rápida e com maior custo por bit. Por serem de maior custo, elas costumam ser pequenas, isto é, de capacidade reduzida.
+
+4- Ciclo de barramento num acesso de leitura a memória principal
+(1) Processador inicia o ciclo de barramento colocando o endereço de locação de memória a ser acessada no barramento de endereço;
+(2) No início do próximo ciclo de clock o processador ativa um sinal de controle indicando uma operação de leitura;
+(3) O endereço e o sinal de controle chegam à memória, que após um tempo coloca o conteúdo da locação de memória endereçada no barramento de dados;
+(4) No início do quarto ciclo de clock, o processador captura a informação presente no barramento de dados e finaliza o ciclo de barramento, desativando o sinal de controle e retirando o endereço.
+
+5- Defina
+a) Ciclo de bit: circuito eletrônico que armazena um bit de informação.
+b) Locação de memória: menor conjunto de células de bits acessado pelo processador. Normalmente é de 1 byte.
+c) Byte de memória: Nome informal para locação de memória de 8 bits.
+
+6- Diferenças entre os tipos de dispositivos de memória instalados num sistema de um computador
+A diferença está na capacidade de memória ser escrita e a questão de ser volátil. Se classificam em:
+* PROM (Memória programável somente de leitura): Esse tipo de dispositivo permite apenas acessos de leitura. As informações armazenadas são atribuídas pelo fabricante do sistema, e não podem ser modificadas após o seu armazenamento;
+* EPROM (Memória programável e apagável somente de leitura): Similar a PROM, porém o conteúdo de uma memória EPROM pode ser apagado, e a memória pode ser novamente usada para armazenar um novo conjunto de informações;
+* RAM (Memória de acesso randômico): O processador pode efetuar acessos de leitura e escrita a um dispositivo RAM. As memórias deste tipo são usadas para armazenar as instruções e dados de um programa em execução. Existem RAM's estáticas e RAM's dinâmicas. Elas diferem quanto à capacidade de armazenamento e ao tempo de acesso.
+
+7- Finalidade da memória virtual
+Foi originalmente criada para permitir a execução de programas cujas exigências quanto ao tamanho da memória sejam maiores do que a capacidade de amemória instalada no sistema. Ela usa memória secundária como memória principal.
+
+8- Defina:
+a) DAT: Componente do sub-sistema de memória que recebe do processador o endereço virtual gerado pelo programa em execução e o mapeia em um endereço real e o envia para a memória principal através do barramento de endereço.
+b) TLB: Pequena memória presente na DAT que age como uma memória cache, armazenando os pares que foram utilizados nos acessos mais recentes. Ela armazena os últimos pares de endereços acessados.
+
+9- Questões mais importantes relacionadas à hierarquia de memória  para tratar um bloco de memória
+* Onde colocar um bloco: Pode ser implementada com diversos esquemas, que variam desde o mapeamento direto, associativo por conjunto até o completamente associativo.
+* Como localizar um bloco: Depende do esquema implementado para colocação do bloco na hierarquia de memória. A escolha do mapeamento depende do custo de uma falha em relação ao custo da implementação por associatividade.
+* Como substituir um bloco: É necessário substituir um bloco de memória quando não existem mais espaços livres naquele nível da hierarquia de memória. O bloco candidato à substituição depende da forma como o mapeamento foi implementado.
+* Como modificar um bloco: Existem duas opções básicas para tratamento de escrita na memória:
+(1) write-throught: O dado é escrito tanto na memória cache quanto na memória principal. As fahas são menos custosas e sua implementação é mais simples
+(2) write-back: O dado é escrito somente na memória cache. O dado é copiado para a memória principal só no momento da substituição. As palavras são escritas na velocidade da memória cache, e múltiplas escritas num bloco correspondem a uma única escrita na componente inferior da hierarquia de memória.
+
+10- Finalidade de uma interface de E/S
+Tornar transparente para o processador os detalhes de operação e controle dos dispositivos períféricos.
+
+11- Descrever a organização típica de uma interface de E/S
+É organizada em 2 partes:
+(1) Genérica: Parte que interage com o processador. Tem no mínimo um registrador de dados, um registrador de controle e um registrador de estado;
+(2) Específica: Parte que interage diretamente com o periférico I/O.
+Exemplo: HD, teclado, monitor.
+

@@ -1,0 +1,10 @@
+1- Cite as diferenças nos processadores que são implementados com projeto multiciclo daqueles implementados com projeto monociclo.
+2- Por que o sistema de memória é implementado nos computadores atuais é implementado como uma hierarquia? Além disso, desenhe e descreva genericamente uma hierarquia de memória de N níveis.
+3- Considere uma memória principal com 64 palavras, uma memória cache com 8 blocos e uma referência a palavra de memória com endereço 26. Mostre através de figuras como as caches são mapeadas (suponha, quando pertinente, cada conjunto com dois elementos de uma palavra).
+4- Quais as técnicas mais comuns de transferência de dados? Ressalte se é necessário suporte de software ou hardware.
+5- Responda:
+a) Qual a finalidade da técnica de memória virtual?
+b) ... interfaces de entrada e saída no subsistema de entrada e saída de dados?
+c) ... transferência de dados você escolheria para um sistema completamente dedicado...
+
+OBS: Letras b e c estão impossíveis de entender o que está escrito. Vou ver se descubro e te mando.
