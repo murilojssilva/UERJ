@@ -1,0 +1,68 @@
+%Script Motion
+pkg load image; 
+resp = 'S';
+	while resp == 'S' || resp == 's',
+		arq = input('Insira o nome de arquivo de uma imagem entre aspas: ');
+		img = imread(arq);
+		f = fspecial('motion', 50, 45);
+		R = img(:, :, 1);
+		G = img(:, :, 2);
+		B = img(:, :, 3);
+		I1 = imfilter(R, f);
+		I2 = imfilter(G, f);
+		I3 = imfilter(B, f);
+		new_img = cat(3, I1, I2, I3);
+		figure('Name','Mascara de Movimento','NumberTitle','off')
+		subplot(2,2,[1,2]);
+		imshow(img)
+		subplot(2,2,[3,4]);
+		imshow(new_img)
+		resp = input('Deseja inserir nova foto? (S/N)', ' ');
+	endwhile
+disp('Tchau!'); 
+
+%Script Laplacian
+pkg load image; 
+resp = 'S';
+	while resp == 'S' || resp == 's',
+		arq = input('Insira o nome de arquivo de uma imagem entre aspas: ');
+		img = imread(arq);
+		f = fspecial('laplacian', 0.1);
+		R = img(:, :, 1);
+		G = img(:, :, 2);
+		B = img(:, :, 3);
+		I1 = imfilter(R, f);
+		I2 = imfilter(G, f);
+		I3 = imfilter(B, f);
+		new_img = cat(3, I1, I2, I3);
+		figure('Name','Mascara Laplaciana','NumberTitle','off')
+		subplot(2,2,[1,2]);
+		imshow(img)
+		subplot(2,2,[3,4]);
+		imshow(new_img)
+		resp = input('Deseja inserir nova foto? (S/N)', ' ');
+	endwhile
+disp('Tchau!'); 
+
+%Script Unsharp
+pkg load image; 
+resp = 'S';
+	while resp == 'S' || resp == 's',
+		arq = input('Insira o nome de arquivo de uma imagem entre aspas: ');
+		img = imread(arq);
+		f = fspecial('unsharp', 0.2);
+		R = img(:, :, 1);
+		G = img(:, :, 2);
+		B = img(:, :, 3);
+		I1 = imfilter(R, f);
+		I2 = imfilter(G, f);
+		I3 = imfilter(B, f);
+		new_img = cat(3, I1, I2, I3);
+		figure('Name','Mascara de Diminuicao de Nitidez','NumberTitle','off')
+		subplot(2,2,[1,2]);
+		imshow(img)
+		subplot(2,2,[3,4]);
+		imshow(new_img)
+		resp = input('Deseja inserir nova foto? (S/N)', ' ');
+	endwhile
+disp('Tchau!'); 

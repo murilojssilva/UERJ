@@ -1,0 +1,147 @@
+% Exercício 1
+
+low = imread("Einstein_low_contrast.png");
+med = imread("Einstein_med_contrast.png");
+high = imread("Einstein_high_contrast.png");
+figure('Name','Einstein Low Contrast','NumberTitle','off')
+subplot(2,2,[1,2]);
+imshow(low)
+subplot(2,2,[3,4]);
+imhist(low)
+figure('Name','Einstein Medium Contrast','NumberTitle','off')
+subplot(2,2,[1,2]);
+imshow(med)
+subplot(2,2,[3,4]);
+imhist(med)
+figure('Name','Einstein High Contrast','NumberTitle','off')
+subplot(2,2,[1,2]);
+imshow(high)
+subplot(2,2,[3,4]);
+imhist(high)
+new_low = imadjust(double(low)/255,[0.35 0.65],[]);
+figure('Name','Einstein Low Contrast Edited','NumberTitle','off')
+subplot(2,2,[1,2]);
+imshow(new_low) 
+subplot(2,2,[3,4]);
+imhist(new_low)
+
+
+% Exercício 2
+
+leme = imread("leme.bmp");
+R = leme(:, :, 1);
+G = leme(:, :, 2);
+B = leme(:, :, 3);
+L1 = imadjust(double(R)/255,[], [], 0.6);
+L2 = imadjust(double(G)/255,[], [], 0.6);
+L3 = imadjust(double(B)/255,[], [], 0.6);
+new_leme = cat(3, L1, L2, L3);
+figure('Name','Leme Edited','NumberTitle','off')
+subplot(2,2,[1,2]);
+imshow(leme)
+subplot(2,2,[3,4]);
+imshow(new_leme)
+
+% Exercício 3
+
+%Script
+pkg load image; 
+resp = 'S';
+	while resp == 'S' || resp == 's',
+		arq = input('Insira o nome de arquivo de uma imagem entre aspas: ');
+		img = imread(arq);
+		f = ones(5,5) / 25;
+		R = img(:, :, 1);
+		G = img(:, :, 2);
+		B = img(:, :, 3);
+		I1 = imfilter(R, f);
+		I2 = imfilter(G, f);
+		I3 = imfilter(B, f);
+		new_img = cat(3, I1, I2, I3);
+		figure('Name','Suavizacao Linear - Filtro de Media','NumberTitle','off')
+		subplot(2,2,[1,2]);
+		imshow(img)
+		subplot(2,2,[3,4]);
+		imshow(new_img)
+		resp = input('Deseja inserir nova foto? (S/N) ', ' ');
+	endwhile
+disp('Tchau!'); 
+
+% Exercício 4
+
+%Script
+pkg load image; 
+resp = 'S';
+	while resp == 'S' || resp == 's',
+		loop = 1;
+		arq = input('Insira o nome de arquivo de uma imagem entre aspas: ');
+		
+	
+		if ~exist(arq, 'file')
+			% File doesn't exist -- didn't find it there.  Check the search path for it.
+			arq = baseFileName; % No path this time.
+			if ~exist(arq, 'file')
+				% Still didn't find it.  Alert user.
+				errorMessage = sprintf('Error: %s does not exist in the search path folders.', arq);
+				uiwait(warndlg(errorMessage));
+				return;
+			end
+		end
+		
+		img = imread(arq);
+			while loop == 1,
+				filtro = input('Deseja utilizar qual filtro? [1 - Movimento / 2 - Laplaciano / 3 - Diminuicao de Nitidez] ');
+					if (filtro == 1)
+						f = fspecial('motion', 50, 45);
+						loop = 0;
+					else if (filtro == 2)
+						f = fspecial('laplacian', 0.1);
+						loop = 0;
+					else if (filtro == 3)
+						f = fspecial('unsharp', 0.2);
+						loop = 0;
+					else
+						disp('Favor inserir 1, 2 ou 3.');
+						loop = 1;						
+					endif
+			endwhile
+						
+			R = img(:, :, 1);
+			G = img(:, :, 2);
+			B = img(:, :, 3);
+			I1 = imfilter(R, f);
+			I2 = imfilter(G, f);
+			I3 = imfilter(B, f);
+			new_img = cat(3, I1, I2, I3);
+			figure('Name','Filtro','NumberTitle','off')
+			subplot(2,2,[1,2]);
+			imshow(img)
+			subplot(2,2,[3,4]);
+			imshow(new_img)
+			resp = input('Deseja inserir nova foto? (S/N)', ' ');
+	endwhile
+disp('Tchau!'); 
+
+% Exercício 5
+
+coins = imread("Coins.png");
+imhist(coins)
+%Analisando o histograma, a parte da imagem do background vai até 79
+bi = roicolor(coins, 79, 255);
+new_coins = bi.*coins;
+figure('Name','Coins','NumberTitle','off')
+subplot(2,2,[1,2]);
+imshow(coins)
+subplot(2,2,[3,4]);
+imshow(new_coins)
+
+%Demonstracao opcional com os histogramas
+figure('Name','Coins Histogram','NumberTitle','off')
+subplot(2,2,[1,2]);
+imhist(coins)
+subplot(2,2,[3,4]);
+imhist(new_coins)
+
+
+
+
