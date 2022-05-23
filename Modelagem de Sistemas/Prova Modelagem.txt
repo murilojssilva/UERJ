@@ -1,0 +1,49 @@
+Kaos:
+Modelagem orientada a metas
+
+* Meta: Declaração de intenção prescrita que o sistema deve satisfazer através da cooperação de seus agentes
+
+* Agente: Componente ativo do sistema desempenhando um papel específico para a satisfação de uma meta (que requer a cooperação de agentes)
+
+* Requisito: Uma meta sobre a responsabilidade de um único agente do sistema a ser contruído
+
+* Expectativa: Uma meta sobre responsabilidade de um único agente no ambiente
+
+* Propriedade do domínio: É uma declaração descritiva sobre o ambiente, que espera ser verdadeira independentemente de como o sistema se comporta (verdade absoluta)
+
+* Hipótese: Declaração descritiva satisfeita pelo ambiente, mas que pode mudar
+
+* Metas comportamentais: Declarações prescritas que definem os comportamentos admissíveis do sistema
+(Alcança, Mantém, Evita). São estabelecidas de forma clara, e sempre é possível determinar se ela foi satisfeita.
+
+- Comportamento do sistema é composto pelo comportamento paralelo de seus agentes
+- Comportamento do agente é capturado como uma sequência de transições de estados para os itens controlados pelos agentes, representados por variáveis de estado
+
+* Metas flexíveis: Declarações prescritas definindo preferências entre os comportamentos alternativos do sistema (usadas como critério para estabelecer uma opção para o sistema entre várias alternativas)
+
+UMA META DE BAIXO NÍVEL CONTRIBUI PARA UMA META DE ALTO NÍVEL SE ESTIVEREM NO MESMO "GALHO". UMA SUBMETA PODE CONTRIBUIR PARA MAIS DE UM PAI
+
+- Visão intencional: captura os objetivos do sistema (metas funcionais e não-funcionais, conflitos, obstáculos, refinamentos, suposições do ambiente)
+- Visão estrutural: captura os objetivos conceituais manipulados pelo sistema, sua estrutura e relacionamento (entidades, atributos, relacionamentos, eventos, agentes, mecanismos de especificação e agregação)
+- Visão de responsabilidade: captura os agentes formando o sistema, suas responsabilidade em relação as metas, e interfaces uns com os outros (capacidade, decomposição e dependência entre os agentes)
+- Visão funcional: Captura os serviçoes que o sistema deve prover para operacionalizar as metas funcionais
+- Visão comportamental: Captura os comportamentos do sistema necessários para satisfazer as metas comportamentais (cenários: ilustram, maquinas de estado: descrevem)
+
+Tipos de Relacionamento
+- Refinamento AND: Relaciona uma meta com um conjunto de submetas
+- Contribuição: Relaciona uma submeta com uma meta-pai
+- Refinamento OR: Modela formas alternativas de refinar uma menta em submetas usando um AND
+- Confito: Define que um conjunto de metas são conflitantes
+
+Link de Refinamento AND
+Semântica: Uma meta-pai pode ser satisfeita através da satisfação de todas as suas submetas (costuma-se organizar as metas da esquerda pra direita, em ordem de acontecimento)
+
+NÃO CONFUNDIR META COM OPERACIONALIZAÇÃO (Verbos no particípio operação, função...)
+
+Link de Contribuição
+Semântica: Uma submeta contribui para uma meta pai se é parte de um refinamento AND da meta-pai
+
+Link de Refinamento OR
+Semântica: Uma meta-pai pode ser satisfeita por qualquer um dos refinamentos AND usados para modelar sistemas alternativos
+
+Metas-folha possuem ligação com o seu agente

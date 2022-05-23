@@ -1,0 +1,47 @@
+Nome: Manter valor pago pelo pacote
+Def: Fazer com que o pacote de viagens seja pago antes da viagem ser realizada e o cliente não tenha que pagar mais nada para utilizá-lo, salvo alguma inclusão prevista em contrato.
+Tipo: Mantém
+Fonte: Contrato firmado entre usuário e agência de viagens
+Prioridade: alta
+
+Nome: Uber incluído no pacote de viagens
+Def: A inclusão do Uber no pacote de viagens visa facilitar a vida do cliente, já incluindo o transporte terrestre no local onde ele irá se hospedar. 
+Tipo: Alcança
+Fonte: Contrato firmado entre o Uber e a agência de viagens
+Prioridade: alta
+
+Nome: Maximizar base de clientes
+Def: Com a satisfação dos clientes de já possuir o Uber no pacote, poupando tempo e gastos extras com transporte, eles criam fidelidade com a agência de viagens e a indicam a outros clientes interessados.
+Tipo: Alcança
+Fonte: Marketing da agência de viagens
+Prioridade: alta
+
+Nome: Vantagens de escolher o Uber na locomoção
+Def: São muitas as vantagens de se escolher o Uber: Já ser sabido o valor das corridas durante a viagens; saber quem será o motorista que irá transportar o cliente; o trajeto que será percorrido, entre outras coisas.
+Tipo: Alcança
+Fonte: Propaganda feita pela agência de viagens
+Prioridade: alta
+
+Nome: Bonificação para passageiro
+Def: Ao acertar o pacote de viagens, o cliente receberá um cupom de 20 dólares, para utilizar no Uber em uma corrida fora do acordado no contrato do pacote de viagens.
+Tipo: Alcança
+Fonte: Contrato entre cliente e agência de viagens
+Prioridade: média
+
+Nome: Pre agendamento Uber
+Def: A agência de pacote de viagens verifica com o sistema Uber a sua disponibilidade para evitar que ocorra um atraso ou cancelamento do transporte do cliente, e caso afirmativo, informa ao cliente sobre o ocorrido e confirma se ele concorda de haver a troca de motorista.
+Tipo: Alcança
+Fonte: Aplicativo Uber
+Prioridade: média
+
+Nome: Chamar o Uber a qualquer momento
+Def: Caso ocorra algum imprevisto durante a viagem e o cliente resolva cancelar ou remarcar o horário da corrida, ele entra em contato com AGÊNCIA DE VIAGENS/SISTEMA UBER para informar sobre o ocorrido. Ou também o cliente resolva solicitar uma corrida fora do acordado no pacote, ele acessa o aplicativo Uber para solicitar a corrida.
+Tipo: Alcança
+Fonte: Aplicativo Uber
+Prioridade: média
+
+Nome: Prazos dados pelo cliente
+Def: A agência de viagens deve saber os locais e horários acordados pelo cliente para solicitar um carro do Uber para atender o cliente.
+Tipo: Mantém
+Fonte: Contrato firmado entre cliente e agência de viagens
+Prioridade: média

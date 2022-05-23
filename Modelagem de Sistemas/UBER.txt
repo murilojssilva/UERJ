@@ -1,0 +1,60 @@
+﻿- Sistema de cadastramento (Clientes e motoristas)
+
+- Sistema de monitoramento GPS (Clientes e motoristas);
+
+- Sistema de pagamento (Google Wallet);
+- Sistema de notificação (Tanto pra avisar ao motorista que há um novo cliente a ser atendido com as informações - endereço do cliente, endereço destino, informações do cliente, preferência de playlist a ser reproduzida durante a viagem, consumo de produtos..- quanto para os clientes - informações do motorista, tempo estimado para chegada do motorista até ao ponto onde está o cliente, tempo estimado de viagem, avaliação dos motoristas, envio de email e sms com novidades e aprovação de solicitação de corrida...);
+
+- Sistema de seleção do carro *Não sei se esse já está incluído no do GPS;
+
+- Sistema de ranqueamento dos carros (BLACK é o sistema original: um carro sedã com 4 portas e todos os serviços;Carros menos luxuosos mas com os mesmos serviços são do UBERX; UberBerline para carros mais luxuosos e com todos os serviços; UberPOP é para os carros mais baratos, sem os serviços, como carona. *Pode ter motoristas não-profissionais);
+
+- Sistema de compra de produtos (Alimentos e bebidas, árvore de Natal rs);
+
+- Sistema de streaming de músicas (Spotify) *Serviço
+;
+- Sistema de análise do cliente/motorista (Via CPF: Nome do SPC e/ou Serasa, antecedentes criminais) *Isso é um serviço, mas sei lá, achei legal;
+
+- Sistema de cálculo do valor a ser pago ao motorista *Não acho que esse seja o Google Wallet;
+
+- Sistema de integração com as redes sociais e outras mídias (Spotify, Facebook);
+
+- Sistema de geração e aplicação de cupons de desconto *É...;
+
+- Sistema de cancelamento da viagem (Valor a ser pago de R$10,00 a cada cancelamento);
+
+- Sistema de comunicação entre cliente e motorista (Ou sistema de integração);
+
+
+
+Informações do motorista: Nome, foto, modelo do carro, matrícula, automóvel e comentários de outros passageiros, número de telefone
+
+
+
+
+Casos de uso: Cadastramento, Simular uma corrida para saber o valor e tempo, Pedir uma corrida (e selecionar qual dos serviços é o que atende melhor ao cliente), cadastrar código de promoção, verificar histórico de viagens, atualizar perfil, adicionar cartão, desistir de viagem, avaliar corrida, verificar avaliação de corrida, cancelamento de cadastro.
+
+
+Exemplo de caso de Uso:
+
+
+Cliente digita destino _____ Cliente solicita serviço ______ Cliente seleciona cartão cadastrado (caso ele tenha mais de um)
+
+
+
+Serviços:
+
+
+BLACK – Este é o serviço original do Uber. Você será atendido por um sedã de alto nível, com capacidade para até 4 pessoas.
+
+TAXI – Esta opção solicitará um táxi que tem um acordo com o Uber. Esses táxis são idênticos a táxis comuns, mas o pagamento é feito pelo aplicativo.
+
+UberX – Esta opção solicitará um carro comum, com capacidade para até quatro pessoas. É a opção econômica do Uber.
+SUV – Está opção enviará um SUV (utilitário esportivo) ao seu local, com capacidade para até 6 pessoas. Esse serviço é significantemente mais caro que o Black Car.
+LUX – Esta opção enviará um carro de luxo ao seu local com capacidade para até quatro pessoas. Este é o serviço mais caro do Uber.
+
+
+
+
+
+http://www.scriptcase.com.br/blog/diagrama-de-classes-uml/

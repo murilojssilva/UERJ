@@ -1,0 +1,29 @@
+Sistemas Distribuídos: Consiste em diversas computadores independentes entre si que se apresentam como um sistema único e coerente.
+Características:
+- Heterogeneidade: redes, hardware de computador, sistemas operacionais., linguagens de programação, implementações de diferentes desenvolvedores. Middleware: camada intermediária, localizada entre as aplicações e o sistema e operacional e o hardware que fornece uma abstração da programação; Ex: CORBA
+- Sistemas abertos: Disponíveis para desenvolvedores, com mecanismo de comunicação uniforme;
+- Segurança: Proteger para que os dados não sejam acessados por quem não possua acesso, seja por quem não faz parte do sistema ou por quem faz, mas não tem o nível de prioridade adequado para tal;
+- Escalabilidade: Um sistema que continue funcionando eficientemente mesmo que ele aumente o número de recursos;
+- Tratamento de falhas: O sistema deve detectar a falha e verificar se a mesma afetará ou não todos os processos. Em alguns casos, há o reenvio de mensagens como mascaramento. Em outros, como não dá para mascarar tudo, ocorre uma tolerância à essas falhas, se as mesmas não afetarem todo o sistema. Em outros, dá para recuperar essas falhas e também quando ocorre o uso redundante de recursos, o que torna o sistema tolerante à falhas;
+- Concorrência: Vários clientes utilizando os recursos ao mesmo tempo, sem que haja gargalo;
+- Transparência: Sistema é visto como um todo. Tipos: de acesso, de localização e de concorrência, de replicação, falhas, mobilidade, desempenho e escalabilidade;
+- Qualidade de Serviço: Questionar a qualidade do serviço oferecido. Métricas: Confiança, segurança, desempenho e adaptividade.
+
+Comunicação em SD: Como não há memória compartilhada, toda a comunicação ocorre por troca de mensagens. Possui os seguintes protocolos:
+IP: Suporta comunicação entre pares de computadores
+TCP: Serviço de transporte de mensagens mais sofisticado (entrega confiável de sequências de bytes, recepção por parte do processo destino na mesma ordem de envio), sequenciamento, controle de fluxo, retransmissão, uso de buffers e soma de verificação;
+UDP: Uma quase réplica do IP: Um datagrama UDP é encapsulado dentro de um datagrama IP, cabeçalho curto com os números das portas de origem e destino, soma de verificação (sem garantia de entrega)
+RPC: Técnica que permite a um processo chame um procedimento que esteja localizado em outra máquina, sem utilizar nenhuma primitiva de send/receive. Trabalha com troca de mensagens e a execução ocorre em outra máquina, com espaço de endereçamento diferente.
+
+Algoritmos sequenciais: Os algoritmos distribuídos requerem que um processo aja como coordenador. Existem algoritmos de eleição para este coordenador, que são aplicados quando este coordenador falha (Sincronização de relógios e Exclusão mútua)
+
+Relógio de Lamport: Se 2 relógios não interagirem, não é necessário que ocorra a sincronização dos relógios. O que importa não é que todos os processos concordem com a hora exata, mas com a ordem em que acontecem. O sincronismo do relógio é possível sem usar tempo absoluto, por a ordenação não precisa de precisão, basta saber quem veio antes de quem.
+
+Algoritmos de eleição:
+Bully: Um processo nota que o coordenador não está respondendo. Ele envia requisições aos outros processos. Os de maior ID respondem até que o de maior ID seja eleito o coordenador, que envia a uma mensagem aos outros processos. Se o que estava morto voltar, ele solicita novas eleiçoes;
+Ring: O processo que notou envia uma mensagem ao processo seguinte com o seu PID. Quando voltar ao processo inicial, ele envia outra mensagem ao seguinte, com o valor do PID do coordenador.
+
+Algoritmo centralizado: O processo coordenador entra na região crítica. O coordenador dá permissão ou não, caso nenhum processo esteja acessando o recurso necessário no momento. Ao sair da região crítica, o processo envia uma mensagem.
+Algoritmo distribuído: Quando um processo quer acessar um recurso, monta uma mensagem com o seu timestamp e seu número, envia essa mensagem a todos os outros processos (ele inclusive). Se o receptor não estiver utilizando, envia um OK. Se já tiver utilizado, não responde e deixa a requisição em uma fila. Se o receptor também quiser utilizar o recurso, ele compara o timestamp com o da mensagem. O de marca de tempo mais alta tem prioridade.
+Token Ring: O recurso fica rodando entre os processos e caso o processo necessite, utiliza e depois passa tal recurso adiante. Mas só pode utilizar uma vez tal recurso por ciclo
+Consistência: Todas as cópias devem permanecer iguais, mesmo quando ocorre uma alteração em uma delas.
