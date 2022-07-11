@@ -1,0 +1,26 @@
+A pessoa se cadastra como anfitrião no menu do site, quando ela está se cadastrando ou só quando ela usa a extensão?
+A pessoa deve cadastrar alguém de confiança para que ela possa usar do serviço?
+Uma pessoa que não pretenda usar o app para aluguel pode entrar simplesmente para cadastrar os seus serviços?
+O app indica a localização do funcionário sugerido disponível mais próximo, tipo o uber?
+O pagamento ao funcionário é no mesmo modo feito para os aluguéis?
+Esse feedback não poderia ser obrigatório?
+
+
+
+
+
+O diagrama de casos de uso descreve as funcionalidades que um sistema a
+ser projetado representa na visão do usuário, auxiliando na comunicação entre o
+analista de sistema e o usuário e no levantamento dos requisitos do sistema. Este
+diagrama é composto por atores, conjunto de casos de uso e relacionamentos.
+Os atores são entidades externas com quem o sistema em desenvolvimento
+interage. A partir da identificação dos atores, podemos construir os casos de uso,
+levando em consideração o que cada ator precisa que o sistema faça. Nessa
+construção, pode-se distinguir entre dois tipos de casos de uso: primários, que
+representam os objetivos básicos dos atores ao acessar o sistema e os secundários,
+que não trazem benefícios diretos para os atores, mas são necessários para que o
+sistema funcione adequadamente.
+
+
+
+O diagrama de casos de uso é um diagrama da UML que documenta o que o sistema faz do ponto de vista do usuário, analisando as principais funcionalidades do sistema e facilitando a sua comunicação com o analista de sistemas. Com esse diagrama, pode-se fazer o levantamento e validação dos requisitos funcionais do sistema,
