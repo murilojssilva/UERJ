@@ -1,0 +1,15 @@
+9) Num sistema multi usuário como é definida cotas de espaços de disco por usuário?
+Ao ativar as cotas de disco, poderão ser definidos dois valores: o limite de cota de disco e o nível de notificação de cota de disco. É possível especificar que os usuários possam exceder seus limites de cota. O procedimento de ativar as cotas e não limitar o uso do espaço em disco é útil quando você não deseja negar aos usuários o acesso a um volume, mas deseja controlar o uso do espaço em disco para cada usuário. Também é possível especificar se um evento deverá ou não ser criado quando os usuários excederem seus níveis de notificação de cota ou seus limites de cota. 
+
+10) Quais são os tipos de otimização usados nos sistemas de arquivos?
+Otimização de busca: FIFO ou FCFS (First Come First Served), SSTF (Shortest Seek Time First), Scan (elevador) e suas variações.
+Otimização rotacional: SLTF (Shortest Latency Time First), SPTF (Shortes Positioning Time First)
+
+
+Assunto: GA_5
+
+Arquivo: GA5nomesN.doc
+
+email: lingprog3f@gmail.com
+
+http://pac.zscaler.net/centropaulasouza.sp.gov.br/cpsouza.pac

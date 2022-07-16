@@ -1,0 +1,79 @@
+P1-
+
+Um sistema de computação de uso geral moderno consiste em uma CPU e uma série de controladoras de dispositivos que são conectadas através de um barramento comum que fornece acesso à memória compartilhada. A CPU e as controladoras de dispositivos podem executar de modo concorrente, competindo pelos ciclos de memória.
+Bootstrap: programa de inicialização do computador. Tende a ser simples. Inicializa todos os aspectos do sistema, desde os registradores de CPU a controladoras de dispositivos, passando pelo conteúdo da memória. Deve tbm saber como carregar o sistema operacional e iniciar a execução desse sistema, localizando e carregando o kernel do SO. O SO, em seguida, inicia o primeiro processo, com "init", e espera alguma interrupção de HW ou SW. O HW pode disparar uma interrupção a qualquer momento enviando um sinal p/ a CPU, geralmente por meio do barramento do sistema. O software pode disparar uma interrupção executando uma chamada de sistema ou chamada ao monitor
+
+Sistema de computação de uso geral consiste em uma CPU e múltiplas controladoras de dispositivos que são conectadas através de um barramento comum. Cada controladora de dispositivo está encarregada de um tipo específico do dispositivo. Uma controladora de dispositivo mantém algum armazenamento em buffer local e um conjunto  de registradores de propósito especial. A controladora de dispositivo é responsável pela passagem de dados entre os dispositivos periféricos que ela controla e o buffer local. O tamanho do buffer local em uma controladora de dispositivo varia de uma controladora a outra, dependendo do dispositivo específico sendo controlado.
+
+Interrupção: Eventos inesperados que ocasionam um desvio forçado no fluxo normal de um programa em execução. Elas são parte importante da arquitetura do computador. Quando ocorre a interrupção na CPU, ela para o que estava fazendo e transfere a execução para uma pilha de controle. Essa pilha geralmente contém o endereço de início onde está localizada a rotina de serviço para a interrupção. A rotina de serviço de interrupção é executada e, quando finalizada, a CPU retoma a rotina que estava sendo executada anteriormente. Cada projeto de computador possui seu próprio mecanismo de interrupção, mas com funções que se assemelham em todos os projetos. As interrupções devem transferir o controle para a rotina de serviço adequada.
+Podem ser:
+- Assíncronas(ou de hardware): Geradas por dispositivos externos à CPU (I/O). Ocorrem independentemente dos processos que a CPU está executando. Quando ocorre uma interrupção, o processamento do programa em execução executa o tratador de interrupção (um pedaço do código tipicamente do SO). Em muitos casos, após a execução do tratador, o CPU volta a executar o programa interrompido.
+- Síncronas(traps): Ocorrem em consequência do processo que está em execução, mas não significa dizer que elas são geradas por esse processo. Ocorre em alguns casos. Isso é uma forma do programa acionar o SO, por exemplo, para requisitar um serviço de I/O. Através do mecanismo de interrupção por software, um processo qualquer pode ativar um tratador que pode encaminhar uma chamada ao SO, sem precisar que o programa chame uma rotina do SO já que o SO é um processo a parte, com seu próprio espaço de endereçamento. Podem ser usadas também em situações onde o programa não tem como prosseguir pois aconteceu uma exceção como overflow, por exemplo.
+
+Chamada de sistema: É o mecanismo programático pelo qual o um programa solicita um serviço do núcleo do sistema operacional onde ele está sendo executado.
+
+Tipos de operações de I/O:
+- Interupções de I/O: CPU carrega os registradores adequados dentro da controladora de dispositivos. A controladora de dispositivos, por sua vez, examina o conteúdo desses registradores para determinar a ação que deve ser tomada. Uma vez concluída a transferência, a controladora de dispositivos informa ao CPU que terminou a operação, por meio de uma interrupção. Ocorre, em geral, como resultado de um processo de usuário que solicita I/O. Após iniciada, pode ocorrer de a I/O ser iniciada e, após concluída, o controle volta ao usuário (síncrona) ou o controle pode retornar ao usuário antes mesmo de o processo ter sido concluído (assíncrono), fazendo que o I/O ocorra enquanto as outras operações de sistema ocorrem.
+- DMA: Em um driver simples de entrada no terminal, o primeiro caractere digitado é enviado ao computador. Quando recebido esse caractere, o dispositivo de comunicação assíncrona ao qual a linha de comando
+
+
+Processo: É um programa em execução. Inclui o código do programa como a atividade corrente, conforme representado pelo valor do contador do programa e o conteúdo dos registradores do processador. Inclui também a pilha de processos e uma seção de dados, que contém valores globais.
+Tipos de estado em um processo:
+- Novo: o programa sendo criado
+- Em execução: as instruções estão sendo executados
+- Em espera: o processo está esperando a ocorrência de algum evento (como conclusão de operação de I/O ou recepção de um sinal)
+- Pronto: O processo está esperando para ser atribuído a um processador
+- Encerrado: O processo terminou sua execução
+Transições: Processo P é admitido -> escolhido para execução -> solicita uma operação de I/O e é bloqueado -> I/O finalizado -> escolhido para execução (novamente) -> interrompido -> escolhido para execução (terceira vez) -> concluído
+
+Process Control Block: usado para armazenar informações associadas a processo específico que precisam de um controle do SO, incluindo:
+- Estado do processo
+- Número do processo(PID)
+- Contador do programa: indica o endereço da próxima instrução a ser executada para esse processo;
+- Registradores da CPU: Variam em número e tipo, dependendo da arquitetura do computador. Incluem acumuladores, registradores de índice, ponteiros de pilha e registradores de uso geral;
+- Informações de escalonamento de CPU: prioridade, ponteiros para filas de escalonamento, parâmetros;
+- Informações de gerência de memória: registradores base e limite, tabelas de páginas ou de segmentos, etc;
+- Informações de contabilização: tempo de execução real e de CPU, etc
+- Informações de status da I/O: lista de arquivos abertos, lista de dispositivos alocados a um processo, etc.
+
+Escalonamento de processos(multiprogramação): o objetivo é ter programas executando o tempo todo, para maximizar a utilização do CPU. O objetivo do tempo compartilhado é alternar a CPU entre os processos de forma tão frequente que os os usuários possam interagir com cada programa durante sua execução. Isso vale apenas para sistemas com mais de um processador, pois os uniprocessadores terão que esperar até que a CPU esteja liberada e possa ser escalonada.
+Fila de escalonamento: consiste em todos os processos do sistema. Os processos que estão residindo na memória principal e estão prontos e esperando para executar estão mantidos em uma lista chamada "fila de processos prontos". Essa fila geralmente é armazenada como uma lista encadeada.
+
+Escalonadores: Um processo migra entra as várias filas de escalonamento ao long de toda sua vida. O SO deve selecionar, para fins de escalonamento, os processos dessas filas de alguma forma. O processo de seleção  é executado pelo  escalonador adequado.
+Eles podem ser dos tipos:
+- De longo prazo(jobs): seleciona os processos do conjunto e os carrega na memória para execução;
+- De curto prazo(de CPU): seleciona dentre os processos que estão prontos para execução e aloca a CPU a um deles
+- De médio prazo: sistemas de tempo real, remover processos de memória e reduzeir grau de multiprogramação. Em algum momento posterior, o processo  pode ser introduzido novamente na memória e pode ser retomada do ponto que parou (swapping)
+
+Criação de processos: Um processo pode criar vários novos processos através de uma chamada de sistema para criação de processo, durante sua execução. O processo criador é chamado de processo pai, enquanto os novos processos são chamados de filhos desse processo. Cada um desses novos processos podem gerar novos processos, formando uma árvore. Um processo filho pode herdar alguns recursos do processo pai (como memória ou arquivo), assim como dados de inicialização. Quando um processo cria um novo processo, existem 2 possibilidades em termos de execução:
+- O pai continua a executar de forma concorrente com os filhos;
+- O pai espera até que alguns ou todos os filhos tenham terminado.
+E em termos de espaço de endereçamento:
+- O processo filho é uma duplicata do processo pai(mesmo programa);
+- O processo filho tem um programa carregado nele(novo programa).
+Chamada fork()
+- Retorna inteiro:
+* < 0: Erro
+* == 0: Nos processos filho
+* >0: No processo pai e o retorno é o PID do filho
+
+CPU Bound: tempo de processamento depende mais do processador do que do I/O fazendo assim com que atrapalhe o tempo total de processamento. Ex: alguns jogos eletrônicos que utilizam recursos gráficos em 3D de alta complexidade.
+I/O Bound: sistemas que fazem uso intensivo de I/O e fazem pouco uso do CPU(processos interativos). Ex: Pen drives.
+Processos Foreground(primeiro plano): designa processos que estão sujeitos à interação direta do usuário. Do terminal para o arquivo de saída
+Processos Background(segundo plano): designa processos que não estão sujeitos à interação direta do usuário. De um arquivo de entrada para um arquivo de saída.
+
+Memória compartilhada: é a memória que pode ser acessada simultaneamente por múltiplos programas com a intenção de prover comunicação entre eles ou para evitar cópias redundantes.
+- Um dos processos cria a região de memória compartilhada – shmget() – Shared Memory GET – retorna um identificador para o segmento
+- Os processo querem ter acesso a esta região devem anexá-lo ao seu espaço de endereçamento – shmat() – Shared Memory ATtatch – precisa do identificador
+para o segmento
+- Os processos se comunicam acessando normalmente esta região de memória
+- Desanexa memória – shmdt() – SHared Memory DeTatch
+- Destrói região compartilhada – shmctl() – Shared Memory Control
+
+Comunicação entre processos: Os processos podem se comunicar em um ambiente de memória compartilhada. O esquema requer que esses processos compartiilhem um poot de buffers comum e que o código para implementar o buffer seja explicitamente escrito pelo programador da aplicação. Outra forma de obter o mesmo efeito é fornecer o meio para os processos cooperativos se comunicarem entre si através de um recurso de comunicação entre processos (IPC)
+- IPC: Fornece um mecanismo para permitir que os processos comuniquem e sincronizem suas ações sem compartilhar o mesmo espaço de endereçamento. É particularmente útil em um ambiente distribuído no qual os processos em comunicação podem residir em diferentes computadores conectados via rede.
+- Pipe()
+* Cria o pipe – pipe()
+* Pai escreve em uma extremidade (e fecha a outra) – write()
+* Filho lê da outra extremidade (e fecha a uma) – read()
+* Também podem ser tratados como arquivos

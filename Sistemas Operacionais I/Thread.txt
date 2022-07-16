@@ -1,0 +1,63 @@
+Thread: Fluxo de controle de instruções
+Processo: Espaço de memória e recursos alocados a ele associados (uma thread ou mais)
+
+Benefícios: 
+- Capacidade de resposta
+- Compartilhamento de recursos
+- Economia
+- Escalabilidade
+- Facilidade de expressão
+- Aproveitamento de arquiteturas multicore
+
+Thread de usuário:
+- Mais "leves", pois o overhead se limita ao programa
+- Se o kernel não reconhece, pode ser ineficiente
+- Implementação pela aplicação
+- Bibliotecas
+- Chamadas de manipulação de thread não são chamadas do sistema
+- Thread bloqueia o processo
+
+Thread de kernel:
+- Melhor integradas ao escalonador do S.O.
+- Mais overhead
+- Maior custo (chamadas de sistema)
+- Maior paralelismo
+- Implementado pelo S.O.
+
+Kernel x Usuário: Implementações e mapeamento entre dois níveis varia entre sistemas e tem compromissos diferentes
+
+Programação multicore:
+- Divisão de atividades
+- Equilíbrio (balanceamento de carga)
+- Divisão de dados
+- Dependência de dados
+- Teste e depuração
+
+
+Mapeamento muitos-para-um:
+- Muitas threads de usuário para uma única thread de kernel: quando o S.O. não reconhece threads, apenas processos
+- Se uma thread faz uma chamada do S.O. bloqueante, todo o processo é suspenso, mesmo que outras threads pudessem executar. Para evitar, bibliotecas precisam transformar chamadas bloqueantes em não bloqueantes.
+
+Mapeamento um-para-um:
+- Kernel reconhece threads e cada thread de usuário é na verdade uma thread de kernel
+- Mapeamento simples, mas "pesado" - troca de threads envolve mudança para modo protegido
+
+Mapeamento muitos-para-muitos:
+- Mapeamento flexível entre usuário e kernel
+- O S.O. cria um número "suficiente" de threads
+- Bibliotecas de threads de usuário fazem mapeamento de acordo com o S.O.
+
+Questões associadas a threads:
+- Relacionamentos com a criação de processos
+- Cancelamento de threads em execução
+- Tratamento de eventos externos a um processo
+- Utilização de pools (cadeias) de theads
+- Controle de dados específicos de cada thread
+
+
+Compilador:
+- Diretiva: Comando que faz sentido apenas para alguns compiladores
+- Sentinela: Caracter(es) que distinguem uma diretiva
+- Ignora a diretiva caso não reconheça a sentinela
+- Parallel OMP se refere ao bloco (C/C++)
+

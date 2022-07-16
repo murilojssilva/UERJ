@@ -1,0 +1,23 @@
+for (i=inf;i<sup;i++)
+{
+	if (primo(i))
+		cp++;
+}
+
+for (i=start;i<end;i++)
+{
+	if(primo(i))
+		cp[j]++;
+}
+
+
+tamanho = sup - inf;
+bloco = tamanho/np;
+start = (j*bloco);
+end=((j+1)==np) ? sup : start + bloco
+
+
+cp++:
+LD $SO, CO
+ADDi $S0,$S0,1
+ST $S0, CP

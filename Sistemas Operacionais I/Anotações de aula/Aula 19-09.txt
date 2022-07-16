@@ -1,0 +1,38 @@
+-oversub
+
+sched affinity
+
+sched: escalonamento
+#include<sched.h>
+
+0001011: sizeof(affinity_mask) = 11
+Bits 1 são os bits ativos para a criação de processos
+sizeof(affinity_mask): tamanho do número de bytes
+
+errno: biblioteca que identifica e especifica o número do erro correspondente ao numero do byte
+#include<errno.h>
+
+#define __USE_GNU //ativação da flag de macros
+#include <sched.h>
+#undef __USE_GNU
+#include <errno.h>
+
+cpu_set_t affinity_mask; //varia dependendo do tamanho da máquina (short para máquinas 64 bits, por exemplo)
+
+CPU_ZERO(&affinity_mask) //zera a função mascara
+
+CPU_SET (j%NUMBER_OF_CORES,&affinity_mask)//seta a bit específico
+
+setar: faz um ou com o bit(s) específico(s) que se deseja fazer a operação
+Ex: 01010
+    00100
+ou  -----
+    01110
+
+speedup: quantas vezes mais rápido ficou o processo
+usar a média para utilizar o speedup no trabalho
+
+
+
+
+

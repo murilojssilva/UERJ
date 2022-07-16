@@ -1,0 +1,201 @@
+P1
+
+Sistema operacional: Um programa que age como intermediário entre o usuário e o hardware
+Objetivos do SO:
+* Executar programas de usuário e tornar mais simples a solução de problemas
+* Tornar mais conveniente o uso do computador
+* Usar o harware de maneira mais eficiente
+Obs: Caso não houvesse um SO instalado na máquina, o usuário deveria ter conhecimento sobre toda a arquitetura da máquina e conhecimento de hardware para ter poder utilizá-la, e mesmo assim de maneira menos eficiente.
+
+O SO oferece:
+* API (Application Programming Interface) para as chamadas de sistema
+* Interrupções
+* Comandos(interpretador de comandos)
+* Interface gráfica
+* Controle e gerência de recursos de hardware (CPU, memória e dispositivos em geral)
+
+Máquina virtual: software que executa programas como um computador real. 
+Vantagem de se usar: facilita o aperfeiçoamento e testes de novos SOs, diminuição dos custos com hardware...
+Desvantagens: Os ambientes devem ser monitorados, configurados e salvos e desempenho inferior se comparado ao de um SO
+Máquina Virtual sem SO oferece um acesso direto ao hardware, maior complexidade na programação e faz com que se tenha mais detalhes para se preocupar
+Máquina Virtual com SO oferece um acesso mais simples aos recursos, mas gera um menor conhecimento sobre os detalhes. 
+
+Modos de operação:
+* Modo kernel: as aplicações pode executar qualquer tipo de instrução (modo com SO)
+* Modo usuário: as aplicações podem executar as instruções não privilegiadas (programas de aplicação, de sistema q não tem acesso privilegiado e acesso limitado ao hardware)
+
+História dos SOs:
+* Primeira geração
+- Usuário responsável por todo o gerenciamento e uso exclusivo do computador
+- Não existiam linguagens de programação nem SOs
+- Programação direta do hardware através de painés de conectores
+
+* Segunda geração:
+- Usuários submetem programas e esperam respostas
+- Operadores responsáveis pelo gerenciamento (desperdício de tempo de gerenciamento)
+- Desenvolvimento dos sistemas em lote
+
+* Terceira geração:
+- Multiprogramação (vários programas na memória e cada programa utiliza a CPU em um intervalo de tempo). 
+- Sistemas de compartilhamento de tempo (usuários se conectam por meio de terminais e o tempo de processamento é dividido entre os usuários) 
+
+Diferença entre processos e threads: Um processo pode possuir múltiplas threads. Threads representam um linha de execução de um programa e, como os processos, podem ser escalonadas pelo SO (se o mesmo tiver suporte para threads). Threads compartilham o espaço de endereçamento (exceto a pilha de chamadas). Sendo assim, não é necessário criar regiões de memória compartilhada para fazer a comunicação entre threads. A criação de threads é menos custosa pois o espaço de endereçamento do processo não precisa ser replicado.
+
+Classificação dos SOs:
+* Quanto ao número de usuários:
+- Monousuário: somente um usuário pode usar o sistema. Ex: MS-DOS, Windows 9X
+- Multiusuário: múltiplos usuários usam o sistema simultâneamente (Linux, Minux)
+* Quanto ao número de programas no sistema
+- Monoprogramado: somente um programa residente na memória, além do SO
+- Multiprogramado: vários programas residentes na memória, além do SO
+
+Interrupções: Sinaliza a ocorrência de algum evento de hardware ou de software. Para cada interrupção, uma rotina de serviço é designada para tratar essa interrupção. São geradas por algum evento externo ao programa e independe da instrução que está sendo executada no momento. São verificadas se existem ao final da execução de cada instrução.
+Salva o conteúdo dos registradores em uma pilha de controle -> identifica a origem do evento -> obtem o endereço da rotina de tratamento -> restaura o conteúdo dos registradores
+Não é possível haver a execução de programas sem interrupção na multiprogramação pois a interrupção sincroniza a execução de todas as suas rotinas e dos programas do usuário, além de controlar dispositivos.
+Exceção: Interrupção gerada por um software causada por um erro ou um pedido específico de um programa de usuário que um serviço de SO seja executado.
+
+I/O programado: A CPU utiliza polling para monitorar o bit de controle, constantemente retornando para ver se o dispositivo está pronto.
+I/O controlado por interrupção: A CPU não faz polling do bit de controle, mas recebe uma interrupção quando o dispositivo está pronto para o próximo byte.
+Vantagem do controlado por interrupções: As operações de E/S ocorrem de maneira mais eficiente, pois ao invés de o sistema verificar a todo momento o estado da operação pendente, o próprio controlador interrompe o processo quando chega ao fim da operação.
+Vantagem polling: CPU dedicada a gerência das transferências de dados
+
+Eventos síncronos: São previsíveis, ocorrem apenas um único e de cada vez e são resultado direto da execução do programa corrente. Ex: exceção.
+Eventos assíncronos: São imprevisíveis e ocorrem múltiplas vezes. Ex: interrupção.
+
+DMA: Utilizado para dispositivos de alta velocidade. Transfere um bloco inteiro de dados diretamente entre o seu próprio buffer de armazenamento e a memória, sem intervenção da CPU, exceto no início e final da transferência. Responsável pela transferência de dados entre os dispositivos físicos e a memória principal.
+Sem o DMA no hardware, o processador será o responsável pela transferência de dados entre os dispositivos físicos e a memória, fazendo com que o processador fique ocupado a maior parte do tempo. Sistemas que não tem o modo BLOQUEADO são sistemas sem multiprogramação, logo não é possível fazer E/S, e não é preciso utilizar o DMA.
+
+Controlador: A CPU carrega os regs dentro da controladora de dispositivo, que examina o conteúdo desses regs para determinar a ação a ser tomada.
+Buffering: Permite minimizar o problema da disparidade da velocidade de processamento existente entre o processador e o I/O. O processador e o I/O permanecem ocupados a maior parte do tempo.
+Spooling: processo de transferência de dados colocando-os em arquivos em disco temporários (spools) onde o programa pode acessá-lo para processá-lo no futuro com o auxílio do SO. Essa técnica libera o programa para outras atividades.
+
+Chamada de sistema: Porta de entrada para o acesso ao núcleo do sistema operacional e a seus serviços. Sempre que o usuário desejar algum serviço do sistema, ocorre uma chamada a uma das rotinas do sistema através de uma chamada de sistema.
+
+Kernel
+* Monolítico: modelo onde a maioria dos recursos são executados pelo próprio kernel. Para isso, cada módulo da arquitetura são compilados separadamente e depois são juntos.
+* Microkernel (cliente-servidor): trabalha somente com de processos essenciais para manter o sistema em funcionamento. Todo o resto é executado por daemons conhecidas por servidores.
+* Camadas: o sistema é dividido em níveis sobrepostos, onde cada nível oferece um conjunto de funções que podem ser utilizados apenas por esse nível
+
+Sistemas monoprogramáveis: executam um programa por vez
+Sistemas multiprogramáveis: executam vários programas ao mesmo tempo
+Diferença sistemas monoprogramáveis e multiprogramáveis: Os sistemas monoprogramáveis, executam um programa por vez e não utilizam todos os recursos do sistema ao longo da sua execução, causando ociosidade e subutilização de alguns recursos.
+
+pipe(): Permite a comunicação entre dois processos comuns se comuniquem de forma de produto consumidor. Ex: nos sites.
+shget(): Cria/obtem uma região de memória compartilhada
+sgmat(): Anexa a região ao espaço de endereçamento do processo
+sgmdt(): Desanexa a região do espaço de endereçamento do processo
+shmctl(): Operações de controle sobre a região compartilhada - é usada para destruir região compartilhada.
+exec(): troca a área de texto do processo, ou seja, altera o programa a ser executado.
+fork(): cria um processo que á a cópia do pai. No processo pai, o PID corresponde ao processo filho criado, enquanto no filho o PID retorna zero.
+CPU.
+
+CPU-bound: processos que usam o processador com mais frequência que o I/O
+I/O-bound: processos que usam mais o I/O com frequencia que o processador
+
+Foreground: Permite a comunicação direta do usuário com o processo durante o seu processamento.
+Background: Não existe a comunicação direta do usuário com o processo durante o processamento.
+
+Implementação de processos pelo SO é feita pelo Process Control Block. A partir do PCB, o SO mantem as informações de HW, SW e o espaço de endereçamento de cada processo.
+Espaço de enderaçamento: área de memória pertencente ao processo onde as intruções e dados do programa são armazenados para execução.
+Troca de contexto: armazena o conteúdo dos registradores gerais da UCP, além dos registradores de uso específico como program counter, stack pointer e registrador de status.
+Partes que compõem um sistema: Contexto de HW, contexto de SW e espaço de endereçamento.
+Processo: ambiente onde um programa é executado. Se preocupa com a execução e quanto do recursos do sistema cada programa pode utilizar. O processo pode alocar recursos, compartilhar dados, trocar informações e sincronizar sua execução. Um programa pode execute num contexto de um processo e não executar em outro, pois um programa pode necessitar de recursos do sistema que um processo pode possuir enquanto outro não.
+Thread: é uma forma em que um processo se divide em 2 ou mais tarefas que podem ser executadas concorrentemente. Threads são mais rápidos que os processos
+
+Sempre que um programa necessita executar uma instrução privilegiada, ocorre uma chamada de sistema que altera o acesso do processador do modo usuário para o modo kernel. Instruções privilegiadas são instruções que só devem ser executadas pelo SO ou sob sua supervisão. As não-privilegiadas não oferecem risco ao sistema.
+
+Núcleo do sistema: conjunto de rotinas que oferece serviços aos usuários, suas aplicações, além do próprio sistema operacional.
+
+Concorrência: princípio básico para projetar e implementar SOs multiprogramáveis onde é possível o processador executar instruções em paralelo com operações de E/S.
+
+Sistemas de tempo compartilhado: permitem que diversos programas sejam executados a partir da divisão do tempo do processador em pequenos intervalos.
+Diferença entre sistemas de tempo compartilhado e sistemas de tempo real: O tempo de resposta. Nos de tempo real, os tempos de resposta devem estar dentro dos limites rígidos. 
+
+Sistemas monousuário podem ser programáveis: Sim, somente um usuário interagem com o sistema podendo possuir diversas aplicações executando concorrentemente.
+
+
+P2
+
+
+ESCALONAMENTO
+
+Escalonadores:
+- Longo prazo (de jobs): spool de processos a serem criados na memória (menor frequencia)
+- Curto prazo (de CPU): seleciona os processos prontos e aloca a CPU a um deles (maior frequencia)
+- Médio prazo : sistemas de tempo real - remover processos da memória - reduzir grau de multiprogramação
+
+Situações de necessidade de decisão de escalonamento: (processo)
+- Estado de execução para estado de espera
+- Estado de execução para estado pronto
+- Estado de espera para estado pronto
+- Processador termina
+
+Preempção:
+- Não faz o processo utilizar o processador ou até fazer I/O
+- Aumenta os custos de acesso a dados compartilhados
+- Afeta o projeto de kernel
+- Desabilita interrupções
+
+Despachante: Dá o controle do CPU ao processo selecionado pelo escalonador
+
+Critérios de escalonamento:
+- Uso do processador
+- Tempo de resposta
+- Deadlines(prazos)
+* Quando o prazo de termino pode ser especificado
+* O sistema deveria fazer o melhor esforço para atender todos os prazos
+- Previsibilidade
+- Throughput(vazão):
+* número de processos completados por unidade de tempo
+* depende do tamanho dos processos
+* depende das políticas de escalonamento
+-Turnaround:
+* intervalo de tempo entre a submissão de um processo e o seu término
+* inclui o tempo de execução, espera por recursos
+* medida para sistemas batch
+- Waiting time: tempo que o processo aguardou na fila dos prontos
+- Justiça
+- Impondo prioridades
+- Balanceamento de recursos
+
+Critérios de otimização:
+- Máxima utilização de CPU e Throughput
+- Mínima utilização de Turnaround, waiting time e tempo de resposta
+- Trabalho mais curto primeiro
+
+Sem preempção:
+- FIFO: (instante de criação menor implica prioridade maior)
+- Prioridade sem preempção (número menor implica prioridade maior)
+
+Com preempção:
+- Round Robin com quantum = x u.t. (preempção apenas na fatia de tempo, ignorando o resto)
+- Prioridade com preempção (número menor implica prioridade maior)
+- Trabalho restante mais curto primeiro
+
+
+SINCRONIZAÇÃO
+
+Região crítica:
+- Exclusão mútua: não mais do que um único processo pode executar na região crítica em qualquer dado momento
+- Progresso: Se nenhum processo está executando em sua sessão crítica e existem processos que pretendem entrar na sua seção crítica, então apenas estes podem participar da decisão do processo que irá entrar na seção crítica e esta decisão não pode ser adiada indefinidamente
+- Espera limitada: Deve existir um limite de espera para o número de vezes que é permitido a entrada a outros processos na sua seção crítica depois de um processo ter solicitado entrar na seção crítica e antes de o pedido ser garantido
+
+Semáforo:
+- Mecanismo de sincronização provido pelo SO, de mais alto nível, e fácil de usar.
+- É uma variável inteira que, excetuando-se a inicialização, é acessada somente através de duas operações atômicas: wait() e signal()
+* Semáforo de contagem: valor inteiro que pode variar de modo irrestrido. Bloqueia somente quando o valor é zero.
+* Semáforo de binário: valor inteiro pode ser somente 0 ou 1; para exclusão mútua, também chamado de mutex. Também usado para sincronização entre linhas de execução (threads)
+
+
+DEADLOCK
+
+Ocorre quando:
+- Exclusão mútua: Pelo menos um recurso deve ser alocado em modo não compartilhável
+- Posse e espera: Um processo deve estar de posse de pelo menos um recurso e esperando para adquirir recursos adicionais que, no momento, estejam sendo mantidos por outros recursos
+- Inexistência de preempção: Recursos não podem ser interceptados, isto é, um recurso só pode ser liberado voluntariamente pelo processo que o detém
+- Espera circular: Deve existir um conjunto finito de processos em espera de tal modo que P0 esteja esperando por um recurso alocado em P1, P1 em P2, Pn-1 em Pn e Pn em P0
+
+Métodos para manipulação de deadlocks:
+- Garantir que eles nunca ocorram
+* Prevenir - garantir que 1 das 4 condições não seja satisfeita
+* Impedir - SO recebe antecipadamente informações adicionais relacionadas a que recursos um processo solicitará durante o seu tempo de vida.
