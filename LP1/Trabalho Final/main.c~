@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "auxiliar.h"
+#include "professor.h"
+#include "turma.h"
+#include "aluno.h"
+#define TAM 100
+char  MPrin;
+char MenuPrincipal(char MPrin);
+
+void main()
+{
+	menuPrincipal(MPrin);
+}
+
