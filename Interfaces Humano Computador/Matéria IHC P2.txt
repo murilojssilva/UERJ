@@ -1,0 +1,70 @@
+AVALIAÇÃO EM IHC
+
+Atividade profissional. Depende de conhecimentos técnicos:
+Conhecimentos em IHC, métodos de avaliação, modos e meios de aplicação de conceitos e métodos, disciplina e rigor para realizar a coleta de dados, cuidados éticos
+
+Devemos avaliar:
+- Aspectos cognitivos e funcionais
+- Aspectos sócio-culturais
+- Aspectos efetivos
+
+Quando avaliar:
+- Avaliação formativa
+- Avaliação somativa
+
+Paradigmas para avaliação:
+- Rápido e rasteiro (mais comum, avaliações rápidas e podem se repetir)
+- Testes de usabilidade (envolvem usuários reais ou potenciais, em lab ou campo, tarefas controladas)
+- Estudos de campo (exclusivas de ambiente natural dos usuários/participantes, obs feitas sem qualquer interferencia, determinam requisitos e estratégias)
+- Avaliação predativa (ñ envolve usuários, conhecimentos de especialistas)
+
+Técnicas de avaliação
+- Observar os usuários
+- Perguntas aos usuários
+- Consultar especialistas
+- Testes com usuários
+- Modelo de desempenho dos usuários
+
+Guia de planejamento de uma avaliação:
+DECIDE:
+- D (Determine): Determinar os objetos reais q a avaliação deve tratar
+- E (Explore): Explorar perguntas específicas a serem respondidas
+- C (Choose): Escolher o paradigma e as técnicas de avaliação
+- I (Identif): Identificar questões práticas
+- D (Decide): Decidir como lidar com questões éticas
+- E (Evaluate): Avaliar, interpretar e apresentar os dados
+
+Abordagens para avaliação: Podemos envolver ou não usuários 
+
+Abordagens por inspecção:
+- Pode ser feita por um especialista
+- Tenta antever consequências de decisões de design
+- Casos de produtos e processos
+
+Métodos de avaliação:
+- Heurística: mais utilizado
+- Percurso Cognitivo: Eng cognitiva
+- Inspeção semiótica: Eng semiótica
+
+Avaliação por observação: Envolvimento do usuário(com ou sem apoio da tecnologia)
+
+Métodos de avaliação por observação:
+- Teste de usabilidade
+- Avaliação de comunicabilidade
+- Prototipação em papel
+
+Avaliação heurística:
+- Não envolve usuários (realizada por um especialista)
+- Conhecimento prático
+- Proposta por Nielsen
+10 Heurísticas de Nielsen:
+* Visibilidade do estado do sistema
+* Correspondência ente o sistema e o mundo real
+* Controle e liberdade do usuário
+* Consistência e padronização
+* Reconhecimento em vez de memorização
+* Flexibilidade e eficiência de uso
+* Projeto estético e minimalista
+* Prevenção de erros
+* Ajude os usuários a reconhecerem, diagnosticarem e se recuperarem de erros
+* Ajuda e documentação
