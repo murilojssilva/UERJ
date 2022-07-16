@@ -1,0 +1,17 @@
+#include <stdio.h>
+int soma (int a,b);
+int main()
+{
+	int a,b;
+	scanf("%d",&a);
+	scanf("%d",&b);
+	printf("%d",soma (a,b));
+	return 0;
+}
+int soma (int a,b)
+{
+	int i;
+	for (i=a;i<=b;i++)
+		if (i%5==0)
+			soma+=i;
+}
