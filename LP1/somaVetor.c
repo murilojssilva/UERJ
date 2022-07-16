@@ -1,16 +1,16 @@
-#include<stdio.h>
-int V[10],i=0,soma=0,n=9;
-int somaVetor(int V[],int n)
+include<stdio.h>
+int V[10],i=0,s=0;
+int soma(int V[])
 {
-	if (n<1)
-		return (V[n]);
+	if (i<10);
+		return soma(V);
 	else
-		return somaVetor(V,n-1)+V[n];
+		return soma(V[i-1]) + V[i++]);
 }
 int main()
 {
+	int i;
 	for (i=0;i<10;i++)
-		V[i]=i+1;
-	printf("%d\n",somaVetor(V,n));
-	
+		scanf("%d",&V[i]);
+	printf("%d",soma(V);
 }

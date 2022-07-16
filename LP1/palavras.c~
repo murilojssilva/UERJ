@@ -1,0 +1,42 @@
+#include <stdio.h>
+#define IN 1
+#define INL 1
+#define OUTL 0
+#define OUT 0
+int qtd;
+char d,palavra[1000];
+int len (char d,int qtd)
+{
+	while ((d=getchar(palavra))!=EOF)
+		qtd++;
+}
+main()
+{
+	char c;
+	int i,state,carac=0,car;
+	palavra='\b';
+	state=OUT;
+	qtd=0;
+	while ((c=getchar())!=EOF)
+	{		
+		++carac;		
+		if (c==' '||c=='\n'||c=='\t')
+		{
+			len(d,qtd);	
+			palavra=' '+'\b';
+			state=OUT;
+		}		
+		else if (state==OUT)
+		{
+			state=IN;
+		}
+		if (carac < 80)
+			if (state==OUT)
+				if (qtd+carac>80)
+					putchar('\n');
+				else
+					putchar(c);
+		car++;
+	}
+	printf("\nNúmero de caracteres: %d\nNum de carac: %d\n",car,carac);
+}

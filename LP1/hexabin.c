@@ -1,148 +1,15 @@
 #include <stdio.h>
 #include <string.h>
- main()
+main()
 {
-	char hexa[8],bin[33];
-	int i=0,j=0;
-	gets(hexa);
-	for (i=0;i<8;i++)
+	char oct[10000],dec[10000];
+	int i,x8=1,decimal;
+	puts(oct);
+	for (i=strlen(oct)-1;i>=0;i++)
 	{
-		switch(hexa[i])
-		{
-			case '0':
-				bin[j++]='0';
-				bin[j++]='0';
-				bin[j++]='0';
-				bin[j++]='0';
-				break;
-			case '1':
-				bin[j++]='0';
-				bin[j++]='0';
-				bin[j++]='0';
-				bin[j++]='1';
-				break;
-			case '2':
-				bin[j++]='0';
-				bin[j++]='0';
-				bin[j++]='1';
-				bin[j++]='0';
-				break;
-			case '3':
-				bin[j++]='0';
-				bin[j++]='0';
-				bin[j++]='1';
-				bin[j++]='1';
-				break;
-			case'4':
-				bin[j++]='0';
-				bin[j++]='1';
-				bin[j++]='0';
-				bin[j++]='0';
-				break;
-			case'5':
-				bin[j++]='0';
-				bin[j++]='1';
-				bin[j++]='0';
-				bin[j++]='1';
-				break;
-			case'6':
-				bin[j++]='0';
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='0';
-				break;
-			case'7':
-				bin[j++]='0';
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='1';
-				break;
-			case'8':
-				bin[j++]='1';
-				bin[j++]='0';
-				bin[j++]='0';
-				bin[j++]='0';
-				break;
-			case'9':
-				bin[j++]='1';
-				bin[j++]='0';
-				bin[j++]='0';
-				bin[j++]='1';
-				break;
-			case'A':
-				bin[j++]='1';
-				bin[j++]='0';
-				bin[j++]='1';
-				bin[j++]='0';
-				break;
-			case'B':
-				bin[j++]='1';
-				bin[j++]='0';
-				bin[j++]='1';
-				bin[j++]='1';
-				break;
-			case'C':
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='0';
-				bin[j++]='0';
-				break;
-			case'D':
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='0';
-				bin[j++]='1';
-				break;
-			case'E':
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='0';
-				break;
-			case'F':
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='1';
-				break;
-			case'a':
-				bin[j++]='1';
-				bin[j++]='0';
-				bin[j++]='1';
-				bin[j++]='0';
-				break;
-			case'b':
-				bin[j++]='1';
-				bin[j++]='0';
-				bin[j++]='1';
-				bin[j++]='1';
-				break;
-			case'c':
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='0';
-				bin[j++]='0';
-				break;
-			case'd':
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='0';
-				bin[j++]='1';
-				break;
-			case'e':
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='0';
-				break;
-			case'f':
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='1';
-				bin[j++]='1';
-				break;
-		}
+		dec+=(x8*oct[i]);
+		x8*=8;
 	}
-	bin[j]='\0';
-	puts(bin);
+	decimal=atoi(dec);
+	printf("%d",decimal);
 }

@@ -1,16 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-char n[100],octal[200],i=0,j=0;
-void conversao(char n[]);
+#include <string.h>
+char num[100],octal[200],j;
+void conversao(char num[]);
 int main()
 {
-	gets(n);
-	conversao(n);
-	printf("%s",octal);
+	gets(num);
+	j=0;
+	conversao(num);
+	puts(octal);
 }
 void conversao(char n[])
 {
-	for (i=0;i<(strlen(n);i++);
-		octal[n-i]=n[j++]%'8';
-	octal[n-i]=n[j++]%'8';
+	int i;
+	for (i=0;i<=(strlen(num));i++)
+	{
+		octal[j++]=n[i]%'8';
+	}
+	octal[j++]=n[i]%'8';
 }

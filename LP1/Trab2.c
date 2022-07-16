@@ -24,6 +24,7 @@ main()
 			for (j=i+1;j<65;j++)
 			{
 				if (num1[j]=='0')
+					v1='1';
 					num1[j]+=v1;
 					break;
 				if (num2[i+1]=='0')
@@ -35,6 +36,7 @@ main()
 			soma[i]='0';
 		if (i==64)
 			soma[64]='\0';
+		c=v1;
 	}
 	printf("\n");
 	for (i=0;i<65;i++)

@@ -1,8 +1,5 @@
 #include <stdio.h>
-int main ()
+main()
 {
-char string [] = "Hello world!";
-char i[] = " Olá mundo!";
-sprintf("%s","%s",string,i);
+	printf("\nHello World\n");
 }
-
