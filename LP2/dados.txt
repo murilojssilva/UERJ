@@ -1,0 +1,13 @@
+Windows
+Download putty: www.putty.org
+152.92.236.11
+Transferencia de arquivos: winscp
+unixhelp
+editor de texto: mcedit
+
+152.92.236.11/tutoria/java
+152.92.236.11/javadocs
+Terminal:
+sftp lp234@152.92.236.11 (envio)
+ssh lp234@152.92.236.11 (manipulação)
+senha 34: A/LK3Kc5
