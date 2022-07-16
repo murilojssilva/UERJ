@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+	char c[20],op;
+	int a,b;
+	sscanf(c, "%s %s %s" ,&a,&op,&b);
+	printf("%s",c);
+}

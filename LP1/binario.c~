@@ -1,0 +1,24 @@
+#include <stdio.h>
+main()
+{	
+	int binario[100000],num=0,numero,resto=0,i=0,j;
+	char c;
+	while ((c=getchar())!=EOF)
+	{
+		numero=num;		
+		while (num>1)
+		{
+			resto=num%2;
+			binario[i]=resto;
+			printf("%d - %d\n",num,binario[i]);
+			num=resto;
+			i++;
+		}
+		binario[i]=num;
+		for (j=0;j<=i;j++)
+		{
+			printf("%d",binario[j]);
+		}
+	}
+	printf("\n%d",numero);
+}
