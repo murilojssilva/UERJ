@@ -1,0 +1,11 @@
+./getput < meutexto.txt (cria um novo arquivo texto)
+OBS: Para se ler um arquivo que contenha getchar, deve-se usar o <. Já para criar um novo arquivo, usa-se o > (caso já esteja criado, ele substitui o que tinha pelo novo)
+>> executa o programa anexando-o
+ctrl z - espera a execução do programa para terminar a execução
+ctrl c - encera imediatamente a execução do programa
+ctrl d - parar o arquivo
+>> -
+2> -
+2>> - 
+| - redireciona a saída de um programa para a entrada de outro programa
+grep - recebe uma entrada e exibe as linhas que correspondam a um determinado padrão (ex: grep main) OBS: grep texto -v = o contrário do grep

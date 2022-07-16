@@ -1,0 +1,23 @@
+/*Modifique a função atoi(char []) para que esta faça a conversão
+de uma string contendo um número octal (base 8) para o valor
+correspondente na base decimal.
+*/
+#include<stdio.h>
+#include<string.h>
+int decimal(int i,char oct[i])
+{
+	for (i=0;i<strlen(oct);i++)
+	{
+		decimal+=(oct[i]*x8);
+		x8*=8;
+	}
+	return converte;
+}
+int main()
+{
+	char oct[1000];
+	int x8=1;
+	gets(oct);
+	converte (i,oct[i]);
+	puts
+}
